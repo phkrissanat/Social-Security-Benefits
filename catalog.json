@@ -1,0 +1,1788 @@
+{
+  "schemaVersion": 2,
+  "version": "2026-11-07-central-rules",
+  "reviewedAt": "2026-11-05",
+  "scope": "สิทธิหลัก 7กรณีม.33 /6กรณีม.39 /3ทางเลือกม.40 และสิทธิรักษา-ทันตกรรมที่ใช้ทั่วไป ไม่ใช่ตารางเบิกจ่ายทุกหัตถการ",
+  "sources": {
+    "dental2026": {
+      "url": "https://www.thaigov.go.th/th/news/163637",
+      "publisher": "รัฐบาลไทย",
+      "published": "2026-05-02",
+      "effectiveFrom": "2026-05-01",
+      "status": "in_force"
+    },
+    "family2026": {
+      "url": "https://www.thaigov.go.th/th/news/165971",
+      "publisher": "รัฐบาลไทย",
+      "published": "2026-07-05",
+      "effectiveFrom": null,
+      "status": "current_official_summary"
+    },
+    "medicalGuide": {
+      "url": "https://info.go.th/citizen-guides/94e56e1e-22b7-4c41-ba49-882cd715572d/export-pdf?procedure_id=94e56d2e-cec5-40a7-aea9-e7d0b0b93d18",
+      "publisher": "สำนักงานประกันสังคม ผ่าน info.go.th",
+      "effectiveFrom": null,
+      "status": "citizen_guide"
+    },
+    "disabilityGuide": {
+      "url": "https://info.go.th/citizen-guides/94e56e1d-f6e0-447f-a7d5-f462e559663c/export-pdf?procedure_id=94e56d2e-9622-426f-8c56-93e61370af1e",
+      "publisher": "สำนักงานประกันสังคม ผ่าน info.go.th",
+      "status": "citizen_guide"
+    },
+    "death2026": {
+      "url": "https://www.thaigov.go.th/th/news/165585",
+      "publisher": "รัฐบาลไทย",
+      "status": "current_official_summary"
+    },
+    "pensionGuide": {
+      "url": "https://info.go.th/citizen-guides/94e56e1e-25dc-4b3f-bbe1-1e1804201109/export-pdf?procedure_id=94e56d2e-d2e1-4118-a92c-a9cec37ce1b7",
+      "publisher": "สำนักงานประกันสังคม ผ่าน info.go.th",
+      "status": "citizen_guide"
+    },
+    "careDraft": {
+      "url": "https://secretary.prd.go.th/th/content/category/detail/id/9/iid/522174",
+      "publisher": "กรมประชาสัมพันธ์",
+      "published": "2026-07-15",
+      "status": "draft_not_used"
+    },
+    "sso40base": {
+      "url": "https://www.sso.go.th/wpr/download/download_by_pool_file/9995",
+      "publisher": "สำนักงานประกันสังคม / ราชกิจจานุเบกษา",
+      "status": "law"
+    },
+    "sso40amend2": {
+      "url": "https://www.sso.go.th/wpr/download/download_by_pool_file/13912",
+      "publisher": "สำนักงานประกันสังคม / ราชกิจจานุเบกษา",
+      "effectiveFrom": "2021-02-11",
+      "status": "in_force"
+    },
+    "sso40amend4": {
+      "url": "https://www.sso.go.th/wpr/download/download_by_pool_file/26212",
+      "publisher": "สำนักงานประกันสังคม / ราชกิจจานุเบกษา",
+      "effectiveFrom": "2022-08-01",
+      "status": "in_force"
+    },
+    "sso40amend5": {
+      "url": "https://www.sso.go.th/wpr/download/download_by_pool_file/45526",
+      "publisher": "สำนักงานประกันสังคม / ราชกิจจานุเบกษา",
+      "effectiveFrom": "2026-01-01",
+      "status": "in_force"
+    },
+    "recentDraft": {
+      "url": "https://www.thaigov.go.th/th/news/170835",
+      "publisher": "รัฐบาลไทย",
+      "published": "2026-11-03",
+      "status": "draft_not_used"
+    },
+    "wageCap": {
+      "url": "https://thainews.prd.go.th/thainews/news/view/1741746/?bid=1",
+      "publisher": "กรมประชาสัมพันธ์",
+      "effectiveFrom": "2026-01-01",
+      "status": "current_official_summary"
+    },
+    "healthCheck": {
+      "url": "https://www.prd.go.th/th/content/category/detail/id/39/iid/275285",
+      "publisher": "กรมประชาสัมพันธ์",
+      "effectiveFrom": "2024-04-01",
+      "status": "current_official_summary"
+    },
+    "act": {
+      "url": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/1-พรบ.ประกันสังคม-update.pdf",
+      "publisher": "กระทรวงแรงงาน / พ.ร.บ.ประกันสังคม",
+      "status": "law"
+    },
+    "section39": {
+      "url": "https://info.go.th/procedure/94e56d2e-a31c-405a-9182-17cf7d97475c/view?lat=&lng=",
+      "publisher": "สำนักงานประกันสังคม ผ่าน info.go.th",
+      "status": "citizen_guide"
+    },
+    "unemployment2025": {
+      "url": "https://edumaehongson.prd.go.th/th/content/category/detail/id/39/iid/406186",
+      "publisher": "กรมประชาสัมพันธ์",
+      "effectiveFrom": "2025-06-28",
+      "status": "current_official_summary"
+    },
+    "maternityGuide": {
+      "url": "https://info.go.th/procedure/94e56d2e-d99b-4a3a-91d9-4f3043a5d01c/view?lat=13.7588311&lng=100.5405449",
+      "publisher": "สำนักงานประกันสังคม ผ่าน info.go.th",
+      "effectiveFrom": "2021-01-01",
+      "status": "citizen_guide"
+    },
+    "emergency": {
+      "url": "https://lb.mol.go.th/กรณีประสบอันตรายหรือบาดเจ็บฉุกเฉิน",
+      "publisher": "กระทรวงแรงงาน",
+      "status": "official_service_rules"
+    },
+    "retirementRates2013": {
+      "url": "https://www.oic.go.th/FILEWEB/CABINFOCENTER92/DRAWER054/GENERAL/DATA0000/00000047.PDF",
+      "publisher": "ราชกิจจานุเบกษา ผ่าน สขร."
+    },
+    "retirementRates2022": {
+      "url": "https://www.ocs.go.th/searchlaw/law-index/item/11372",
+      "publisher": "สำนักงานคณะกรรมการกฤษฎีกา"
+    },
+    "retirementRatePeriods": {
+      "url": "https://www.nia.go.th/media/pub_documents/2022/09/ผลการประชุม_ครม._20_09_65.pdf",
+      "publisher": "มติคณะรัฐมนตรี 20 กันยายน 2565"
+    },
+    "wageCapSchedule": {
+      "url": "https://www.sso.go.th/wpr/main/law/กฎกระทรวง_category_list-label_1_109_0",
+      "publisher": "สำนักงานประกันสังคม"
+    },
+    "retirement2003": {
+      "url": "https://www.sso.go.th/wpr/download/download_by_pool_file/2385",
+      "publisher": "กฎกระทรวง"
+    },
+    "retirement2009": {
+      "url": "https://ratchakitcha.soc.go.th/documents/1785812.pdf",
+      "publisher": "กฎกระทรวง"
+    },
+    "retirement2021Feb": {
+      "url": "https://infocenter.oic.go.th/FILEWEB/CABINFOCENTER2/DRAWER056/GENERAL/DATA0000/00000675.PDF",
+      "publisher": "กฎกระทรวง"
+    },
+    "retirement2021Jun": {
+      "url": "https://infocenter.oic.go.th/FILEWEB/CABINFOCENTER2/DRAWER056/GENERAL/DATA0000/00000650.PDF",
+      "publisher": "กฎกระทรวง"
+    },
+    "retirement2021JunMinutes": {
+      "url": "https://dsdw.go.th/Data/DsdwGroupDoc/20210520162043.pdf",
+      "publisher": "สรุปมติ ครม."
+    },
+    "retirement2022May": {
+      "url": "https://fis.rmutr.ac.th/wp-content/uploads/2013/05/rmutr_fis_circular65-048.pdf",
+      "publisher": "กฎกระทรวง"
+    },
+    "wageCapPrior": {
+      "url": "https://www.sso.go.th/wpr/download/download_by_pool_file/2387",
+      "publisher": "สำนักงานประกันสังคม"
+    },
+    "earlyRetirement": {
+      "url": "https://tdri.or.th/wp-content/uploads/2013/04/7_rpt.pdf",
+      "publisher": "รายงานวิจัย TDRI"
+    },
+    "rates2543": {
+      "url": "https://e-cms.rmutl.ac.th/assets/upload/files/2019/12/20191204100751_23748.pdf",
+      "publisher": "เอกสารอธิบายกฎหมายในคลัง มทร.ล้านนา"
+    },
+    "rates2555": {
+      "url": "https://www.dol.go.th/media/813280630581366784/migration/2025/10/Pw8HdB27Eh4QXTaVGsRx1nYi.pdf",
+      "publisher": "หนังสือเวียนสำนักงานประกันสังคม ผ่านกรมที่ดิน"
+    },
+    "rates2021Jan": {
+      "url": "https://ofm.mof.go.th/view/attachment/file/3135343935/มติคณะรัฐมนตรีวันที่%2022%20ธันวาคม%202563.pdf",
+      "publisher": "มติ ครม. ผ่านกระทรวงการคลัง"
+    },
+    "rates2021Sep": {
+      "url": "https://www.ramco.com/hubfs/Acrobat%20Document.pdf",
+      "publisher": "สำเนาราชกิจจานุเบกษา เล่ม 138 ตอนที่ 64 ก"
+    },
+    "total2020Mar": {
+      "url": "https://www.soc.go.th/?id=404&page_id=2375",
+      "publisher": "สำนักเลขาธิการคณะรัฐมนตรี"
+    },
+    "total2020Sep": {
+      "url": "https://www.soc.go.th/?id=411&page_id=2375",
+      "publisher": "สำนักเลขาธิการคณะรัฐมนตรี"
+    }
+  },
+  "assumptions": [
+    "ยังเป็นผู้ประกันตนและส่งต่อเนื่องถึงเดือนก่อนปัจจุบัน",
+    "ม.33/39นับเดือนต่อเนื่องรวมสองมาตรา แต่ไม่รวมม.40",
+    "ม.40สมมติส่งทางเลือกปัจจุบันตลอดช่วงที่กรอก",
+    "จำนวนเดือนใช้คัดกรองการส่งสมทบ ไม่ยืนยันเหตุใช้สิทธิหรือยอดจ่ายจริง"
+  ],
+  "claim": {
+    "withinYears": 2,
+    "sourceIds": [
+      "act",
+      "sso40base"
+    ],
+    "note": "คำขอล่าช้าต้องให้สำนักงานพิจารณาเหตุจำเป็น ไม่ตัดสิทธิอัตโนมัติ"
+  },
+  "benefits": [
+    {
+      "id": "medical",
+      "name": "รักษาพยาบาล",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "เจ็บป่วย",
+      "gate": {
+        "min": 3,
+        "window": 15
+      },
+      "amount": {
+        "text": "รับบริการตามสิทธิ",
+        "kind": "service"
+      },
+      "note": "โรงพยาบาลตามสิทธิ/เครือข่าย เหตุไม่เนื่องจากงาน ไม่ใช่เงินสดคืนผู้ประกันตน; อวัยวะเทียมและการรักษาเฉพาะโรคใช้อัตราประกาศเฉพาะ",
+      "sources": [
+        "medicalGuide"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": null,
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "โรงพยาบาลตามสิทธิ/เครือข่าย · เหตุไม่เนื่องจากงาน",
+      "presentation": {
+        "title": "ค่ารักษาพยาบาล",
+        "description": "เฉพาะบริการที่คุ้มครอง\nณ โรงพยาบาลตามสิทธิหรือเครือข่าย",
+        "headline": "ไม่ต้องสำรองจ่าย"
+      }
+    },
+    {
+      "id": "sick_income",
+      "name": "เงินทดแทนเมื่อหยุดรักษาตัว",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "เจ็บป่วย",
+      "gate": {
+        "min": 3,
+        "window": 15
+      },
+      "amount": {
+        "text": "50% ของฐานค่าจ้างรายวัน",
+        "kind": "wage_formula",
+        "rate": 0.5,
+        "per": "day",
+        "maxDays": {
+          "perCase": 90,
+          "perYear": 180,
+          "chronic": 365
+        }
+      },
+      "note": "แพทย์สั่งพัก ครั้งละไม่เกิน90วัน รวม180วัน/ปี; โรคเรื้อรังตามเกณฑ์365วัน/ปี รับหลังสิทธิค่าจ้างนายจ้างสิ้นสุดหรือรับส่วนต่าง",
+      "sources": [
+        "medicalGuide",
+        "act"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": null,
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "แพทย์สั่งพัก ครั้งละไม่เกิน90วัน รวม180วัน/ปี; โรคเรื้อรังตามเกณฑ์365วัน/ปี หลังสิทธิค่าจ้างนายจ้างสิ้นสุด",
+      "presentation": {
+        "title": "ชดเชยหยุดงานกรณีเจ็บป่วย",
+        "description": "",
+        "sickDescription": "{amount.ratePercent}% ของค่าจ้าง/วัน\n{maximum}\nต่อเนื่องสูงสุด {amount.maxDays.perCase} วัน/ครั้ง\nและ รวมไม่เกิน {amount.maxDays.perYear} วัน/ปี\nกรณีเรื้อรัง ไม่เกิน {amount.maxDays.chronic} วัน/ปี"
+      }
+    },
+    {
+      "id": "emergency",
+      "name": "ฉุกเฉินนอกโรงพยาบาลตามสิทธิ",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "เจ็บป่วย",
+      "gate": {
+        "min": 3,
+        "window": 15
+      },
+      "amount": {
+        "text": "เบิกตามอัตราที่ประกาศ",
+        "kind": "service_schedule"
+      },
+      "note": "แจ้งโรงพยาบาลตามสิทธิโดยเร็ว; อัตรารับผิดชอบช่วง72ชั่วโมงมีข้อกำหนดแยกตามประเภทโรงพยาบาล ไม่ใช่ทุกกรณีเบิกได้ไม่จำกัด",
+      "sources": [
+        "medicalGuide",
+        "emergency"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": null,
+      "verificationNote": "รายละเอียดอัตราตามประกาศเฉพาะ ไม่คำนวณด้วยจำนวนเดือน",
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "แจ้งโรงพยาบาลตามสิทธิโดยเร็ว · ช่วง72ชั่วโมงใช้อัตราตามประเภทโรงพยาบาล",
+      "presentation": {
+        "title": "ค่ารักษาฉุกเฉิน",
+        "description": "นอกโรงพยาบาลตามสิทธิ\nและแจ้งโรงพยาบาลตามสิทธิโดยเร็ว",
+        "rates": [
+          {
+            "label": "ผู้ป่วยนอก รพ.รัฐ",
+            "display": "ตามจริงเท่าที่จำเป็น"
+          },
+          {
+            "label": "ผู้ป่วยนอก รพ.เอกชน",
+            "detail": "บางรายการตรวจรักษา\nเบิกเพิ่มได้ตามเกณฑ์",
+            "total": 1000,
+            "unit": "",
+            "qualifier": "ตามจริง สูงสุด"
+          },
+          {
+            "label": "ผู้ป่วยใน · ค่าห้องและอาหาร",
+            "detail": "เบิกช่วงแรกไม่เกิน 72 ชั่วโมง\nไม่นับวันหยุดราชการ",
+            "total": 700,
+            "unit": "/วัน",
+            "qualifier": "สูงสุด"
+          },
+          {
+            "label": "ฉุกเฉินวิกฤต",
+            "display": "ไม่ต้องสำรองจ่าย",
+            "detail": "จนพ้นภาวะวิกฤต ภายใน 72 ชั่วโมง รวมวันหยุดราชการ"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dental_basic",
+      "name": "อุดฟัน ถอนฟัน ขูดหินปูน",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "เจ็บป่วย",
+      "gate": {
+        "min": 3,
+        "window": 15
+      },
+      "amount": {
+        "text": "ไม่เกิน900บาท/ปี",
+        "kind": "annual_cap",
+        "value": 900,
+        "unit": "THB/year"
+      },
+      "note": "วงเงินเอกชน/คลินิกตามเกณฑ์; โรงพยาบาลรัฐคู่สัญญามีรายการบริการเพิ่มเติม",
+      "sources": [
+        "dental2026"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2026-05-01",
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "วงเงินเอกชน/คลินิก · โรงพยาบาลรัฐคู่สัญญาตามเกณฑ์",
+      "presentation": {
+        "title": "อุด/ถอน/ขูดหินปูน",
+        "description": "วงเงินเอกชน\nรพ.รัฐคู่สัญญา ตามเกณฑ์"
+      }
+    },
+    {
+      "id": "dental_wisdom",
+      "name": "ผ่าฟันคุด",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "เจ็บป่วย",
+      "gate": {
+        "min": 3,
+        "window": 15
+      },
+      "amount": {
+        "text": "1,500–2,500บาท/ซี่",
+        "kind": "procedure_cap",
+        "min": 1500,
+        "max": 2500,
+        "unit": "THB/tooth"
+      },
+      "note": "ไม่ซับซ้อนสูงสุด1,500 ซับซ้อนกรอกระดูกสูงสุด2,500 แยกวงเงิน900บาท; รพ.รัฐคู่สัญญาตามมาตรฐาน ยกเว้นคลินิกนอกเวลา",
+      "sources": [
+        "dental2026"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2026-05-01",
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "แยกจาก900บาท/ปี · วงเงินขึ้นกับความซับซ้อน",
+      "presentation": {
+        "title": "ผ่าฟันคุด",
+        "description": "แยกจากวงเงิน {benefits.dental_basic.amount.value} บาท/ปี"
+      }
+    },
+    {
+      "id": "dentures",
+      "name": "ฟันปลอมถอดได้",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "เจ็บป่วย",
+      "gate": {
+        "min": 3,
+        "window": 15
+      },
+      "amount": {
+        "text": "1,500–6,000บาท",
+        "kind": "procedure_cap",
+        "min": 1500,
+        "max": 6000,
+        "unit": "THB"
+      },
+      "note": "ตามชนิดและจำนวนซี่; ค่าซ่อมตามเกณฑ์900บาท/ครั้ง ไม่ใช่วงเงินรายปีที่ใช้ได้ซ้ำอัตโนมัติ",
+      "sources": [
+        "dental2026"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2026-05-01",
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "ตามชนิดและจำนวนซี่ · ค่าซ่อมตามเกณฑ์900บาท/ครั้ง",
+      "presentation": {
+        "title": "ฟันปลอมถอดได้",
+        "description": "วงเงินทำฟันปลอมตามชนิด\nและจำนวนซี่",
+        "rates": [
+          {
+            "label": "ซ่อมฟันปลอม",
+            "total": 900,
+            "unit": "/ครั้ง",
+            "qualifier": "สูงสุด"
+          }
+        ],
+        "showHeadline": true
+      }
+    },
+    {
+      "id": "implants",
+      "name": "รากฟันเทียมรองรับฟันเทียมทั้งปาก",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "เจ็บป่วย",
+      "gate": {
+        "min": 3,
+        "window": 15
+      },
+      "amount": {
+        "text": "ค่าผ่าตัด17,500บาท/ราย",
+        "kind": "procedure_cap",
+        "value": 17500,
+        "unit": "THB/person"
+      },
+      "note": "สำหรับผู้สูญเสียฟันทั้งปากและใส่ฟันปลอมถอดไม่ได้; ชุดรากฟันเทียม3,300บาทและค่าติดตามผลตามเกณฑ์",
+      "sources": [
+        "dental2026"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2026-05-01",
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "สำหรับสูญเสียฟันทั้งปากตามเกณฑ์ · ชุดรากฟันเทียม3,300บาท",
+      "presentation": {
+        "title": "รากฟันเทียม\nรองรับฟันปลอมทั้งปาก",
+        "description": "ค่าผ่าตัดเหมาจ่ายต่อคน\nภายใน 5 ปีนับจากวันที่ฝัง",
+        "rates": [
+          {
+            "label": "ชุดอุปกรณ์รากฟันเทียม",
+            "total": 3300,
+            "unit": "/ชุด",
+            "qualifier": "สูงสุด"
+          },
+          {
+            "label": "ค่าติดตามการรักษา",
+            "detail": "ปีแรก 1 ครั้ง\nปีที่ 2–5 ไม่เกิน 4 ครั้ง/ปี",
+            "total": 700,
+            "unit": "/ครั้ง"
+          }
+        ],
+        "showHeadline": true
+      }
+    },
+    {
+      "id": "screening",
+      "name": "ตรวจสุขภาพตามช่วงอายุ",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "เจ็บป่วย",
+      "gate": {
+        "min": 3,
+        "window": 15
+      },
+      "amount": {
+        "text": "14รายการตามเกณฑ์",
+        "kind": "service"
+      },
+      "note": "รายการและความถี่ขึ้นกับอายุ/เพศ ไม่ใช่ทุกคนตรวจทุกรายการได้ทุกปี ไม่ใช่วงเงินเงินสด",
+      "sources": [
+        "healthCheck"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2024-04-01",
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "ตามช่วงอายุ เพศ และความถี่ที่กำหนด ไม่ใช่เงินสด",
+      "presentation": {
+        "title": "ตรวจสุขภาพ",
+        "description": "ตามช่วงอายุ เพศ และความถี่ที่กำหนด ไม่ใช่เงินสด"
+      }
+    },
+    {
+      "id": "prenatal",
+      "name": "ตรวจและฝากครรภ์",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "คลอดบุตร",
+      "gate": {
+        "min": 5,
+        "window": 15
+      },
+      "amount": {
+        "text": "ตามจริงรวมไม่เกิน1,500บาท",
+        "kind": "pregnancy_cap",
+        "value": 1500,
+        "unit": "THB/pregnancy"
+      },
+      "note": "แบ่ง5ช่วงอายุครรภ์500/300/300/200/200บาท ต้องมีหลักฐานรับบริการและใบเสร็จ",
+      "sources": [
+        "family2026",
+        "maternityGuide"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2021-01-01",
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "แบ่ง5ช่วงอายุครรภ์ · ใช้ใบเสร็จและหลักฐานรับบริการ",
+      "presentation": {
+        "title": "ตรวจและฝากครรภ์",
+        "description": "เบิกตามจริงตามช่วงอายุครรภ์",
+        "rates": [
+          {
+            "label": "ไม่เกิน 12 สัปดาห์",
+            "total": 500,
+            "unit": "",
+            "qualifier": "สูงสุด"
+          },
+          {
+            "label": "เกิน 12 ถึง 20 สัปดาห์",
+            "total": 300,
+            "unit": "",
+            "qualifier": "สูงสุด"
+          },
+          {
+            "label": "เกิน 20 ถึง 28 สัปดาห์",
+            "total": 300,
+            "unit": "",
+            "qualifier": "สูงสุด"
+          },
+          {
+            "label": "เกิน 28 ถึง 32 สัปดาห์",
+            "total": 200,
+            "unit": "",
+            "qualifier": "สูงสุด"
+          },
+          {
+            "label": "เกิน 32 สัปดาห์",
+            "total": 200,
+            "unit": "",
+            "qualifier": "สูงสุด"
+          }
+        ],
+        "showHeadline": true
+      }
+    },
+    {
+      "id": "birth",
+      "name": "ค่าคลอดบุตร",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "คลอดบุตร",
+      "gate": {
+        "min": 5,
+        "window": 15
+      },
+      "amount": {
+        "text": "15,000บาท/ครั้ง",
+        "kind": "fixed_per_event",
+        "value": 15000,
+        "unit": "THB/delivery"
+      },
+      "note": "ต่อการคลอดหนึ่งครั้ง ไม่ใช่ต่อจำนวนทารกแฝด; คู่สมรสใช้สิทธิค่าคลอดฝ่ายเดียว",
+      "sources": [
+        "family2026",
+        "maternityGuide"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2021-01-01",
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "ต่อการคลอดหนึ่งครั้ง · คู่สมรสใช้ฝ่ายเดียว",
+      "presentation": {
+        "title": "ค่าคลอดบุตร",
+        "description": "คู่สมรสใช้สิทธิฝ่ายเดียว"
+      }
+    },
+    {
+      "id": "maternity_income",
+      "name": "เงินสงเคราะห์หยุดงานคลอดบุตร",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "คลอดบุตร",
+      "gate": {
+        "min": 5,
+        "window": 15
+      },
+      "amount": {
+        "text": "คิด 50% ของฐานค่าจ้างรายวัน เป็นเวลา 90 วัน",
+        "kind": "wage_formula",
+        "rate": 0.5,
+        "days": 90
+      },
+      "note": "เฉพาะผู้ประกันตนหญิง ไม่เกิน2ครั้ง; เงินกองทุนนี้แยกจากค่าจ้างลาคลอดที่นายจ้างจ่าย",
+      "sources": [
+        "act",
+        "wageCap",
+        "family2026",
+        "maternityGuide"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": null,
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "เฉพาะผู้ประกันตนหญิง ไม่เกิน2ครั้ง",
+      "presentation": {
+        "title": "เงินทดแทนคลอดบุตร",
+        "description": "คิด {amount.ratePercent}% ของฐานรายวัน เป็นเวลา {amount.days} วัน · ไม่เกิน 2 ครั้ง"
+      }
+    },
+    {
+      "id": "child",
+      "name": "สงเคราะห์บุตร",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "สงเคราะห์บุตร",
+      "gate": {
+        "min": 12,
+        "window": 36
+      },
+      "amount": {
+        "text": "1,000บาท/คน/เดือน",
+        "kind": "monthly_child",
+        "value": 1000,
+        "maxChildren": 3,
+        "unit": "THB/child/month",
+        "maxAge": 6
+      },
+      "note": "บุตรชอบด้วยกฎหมายตั้งแต่แรกเกิดจนถึงครบ6ปี ไม่เกิน3คน ตรวจผู้ใช้สิทธิและสถานะบุตร",
+      "sources": [
+        "family2026"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2025-01-01",
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "บุตรชอบด้วยกฎหมายถึงครบ6ปี พร้อมกันไม่เกิน3คน",
+      "presentation": {
+        "title": "สงเคราะห์บุตร",
+        "description": "ถึงอายุ {amount.maxAge} ปี · สูงสุด {amount.maxChildren} คน"
+      }
+    },
+    {
+      "id": "disability",
+      "name": "เงินทดแทนทุพพลภาพ",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "ทุพพลภาพ",
+      "gate": {
+        "min": 3,
+        "window": 15
+      },
+      "amount": {
+        "text": "30% หรือ50%ของฐานค่าจ้าง",
+        "kind": "severity_formula",
+        "rates": [
+          0.3,
+          0.5
+        ],
+        "mildMaxMonths": 180
+      },
+      "note": "ไม่รุนแรง35–49%:30%หรือส่วนรายได้ลดลงไม่เกิน30% ไม่เกิน180เดือน; รุนแรงตั้งแต่50%:เงินทดแทน50%ตลอดชีวิต ตามคำวินิจฉัยแพทย์ สปส.",
+      "sources": [
+        "disabilityGuide"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": null,
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "รุนแรง:ตลอดชีวิต · ไม่รุนแรง:ไม่เกิน180เดือน ตามคำวินิจฉัย สปส.",
+      "presentation": {
+        "title": "เงินทดแทนทุพพลภาพ",
+        "description": "ไม่รุนแรงไม่เกิน {amount.mildMaxMonths} เดือน · รุนแรงตลอดชีวิต",
+        "variants": [
+          {
+            "label": "ไม่รุนแรง (ไม่เกิน {amount.mildMaxMonths} เดือน)",
+            "qualifier": "สูงสุด"
+          },
+          {
+            "label": "รุนแรง (ตลอดชีวิต)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "disability_medical",
+      "name": "ค่ารักษาผู้ทุพพลภาพ",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "ทุพพลภาพ",
+      "gate": {
+        "min": 3,
+        "window": 15
+      },
+      "amount": {
+        "text": "เอกชน:นอก2,000/ใน4,000บาทต่อเดือน",
+        "kind": "medical_cap",
+        "outpatient": 2000,
+        "inpatient": 4000,
+        "transport": 500
+      },
+      "note": "รพ.รัฐตามจริง/DRGตามเกณฑ์; เอกชนแยกOPD/IPD; ค่าพาหนะตามจริงไม่เกิน500บาท/เดือน",
+      "sources": [
+        "disabilityGuide"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": null,
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "รพ.รัฐตามเกณฑ์ · ค่าพาหนะตามจริงไม่เกิน500บาท/เดือน",
+      "presentation": {
+        "title": "ค่ารักษาทุพพลภาพ",
+        "description": "รพ.รัฐรับบริการตามสิทธิ",
+        "rates": [
+          {
+            "label": "ผู้ป่วยนอก รพ.เอกชน",
+            "valueRef": "amount.outpatient",
+            "qualifier": "สูงสุด",
+            "unit": "/เดือน"
+          },
+          {
+            "label": "ผู้ป่วยใน รพ.เอกชน",
+            "valueRef": "amount.inpatient",
+            "qualifier": "สูงสุด",
+            "unit": "/เดือน"
+          },
+          {
+            "label": "ค่าพาหนะรับส่ง",
+            "valueRef": "amount.transport",
+            "qualifier": "สูงสุด",
+            "unit": "/เดือน"
+          }
+        ]
+      }
+    },
+    {
+      "id": "funeral",
+      "name": "ค่าทำศพ",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "เสียชีวิต",
+      "gate": {
+        "min": 1,
+        "window": 6
+      },
+      "amount": {
+        "text": "50,000บาท",
+        "kind": "fixed_per_event",
+        "value": 50000,
+        "unit": "THB"
+      },
+      "note": "เหตุไม่เนื่องจากงาน จ่ายผู้จัดการศพตามกฎหมาย; ผู้รับเงินทุพพลภาพ/โรคเรื้อรังมีข้อกำหนดเฉพาะ",
+      "sources": [
+        "death2026",
+        "act"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2020-07-02",
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "จ่ายให้ผู้จัดการศพตามกฎหมาย · เหตุไม่เนื่องจากงาน",
+      "presentation": {
+        "title": "ค่าจัดการศพ",
+        "description": "จ่ายให้ผู้จัดการศพ"
+      }
+    },
+    {
+      "id": "death_grant",
+      "name": "เงินสงเคราะห์กรณีตาย",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "เสียชีวิต",
+      "gate": {
+        "min": 36,
+        "window": null
+      },
+      "amount": {
+        "text": "คิดจาก 50% ของฐานค่าจ้าง",
+        "kind": "death_tiers",
+        "tiers": [
+          {
+            "months": 36,
+            "multiplier": 4
+          },
+          {
+            "months": 120,
+            "multiplier": 12
+          }
+        ],
+        "rate": 0.5
+      },
+      "note": "36–119เดือนใช้4เดือน; ตั้งแต่120เดือนใช้12เดือน จ่ายผู้ที่ระบุหรือทายาทตามกฎหมาย",
+      "sources": [
+        "death2026"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": null,
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "สมทบ36–119เดือนคูณ4; ตั้งแต่120เดือนคูณ12 จ่ายผู้มีสิทธิตามกฎหมาย",
+      "presentation": {
+        "title": "สงเคราะห์กรณีเสียชีวิต",
+        "description": "คำนวณจาก {amount.ratePercent}% ของฐานค่าจ้าง\nส่งเงินสมทบ {amount.tiers.0.months}–{amount.firstTierEnd} เดือน ได้ {amount.tiers.0.multiplier} เท่า\nส่งเงินสมทบ ตั้งแต่ {amount.tiers.1.months} เดือน ได้ {amount.tiers.1.multiplier} เท่า"
+      }
+    },
+    {
+      "id": "pension",
+      "name": "ชราภาพ",
+      "sections": [
+        "33",
+        "39"
+      ],
+      "group": "ชราภาพ",
+      "gate": {
+        "min": 0,
+        "window": null
+      },
+      "amount": {
+        "text": "บำนาญ20% +ส่วนเพิ่มตามปีสมทบ",
+        "kind": "pension_formula",
+        "baseRate": 0.2,
+        "extraRatePer12": 0.015,
+        "thresholdMonths": 180,
+        "averagingMonths": 60,
+        "minimumMonthly": 720,
+        "extraPeriodMonths": 12
+      },
+      "note": "รับเมื่ออายุ55ปีและสิ้นสุดสถานะ:ตั้งแต่180เดือน บำนาญจากฐานเฉลี่ย60เดือนสุดท้าย เพิ่ม1.5%ต่อครบ12เดือนที่เกิน180; ต่ำกว่า180เป็นบำเหน็จตามส่วนเงินสมทบและผลตอบแทน",
+      "sources": [
+        "pensionGuide"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": null,
+      "stage": "future",
+      "requiresActualHistory": true,
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "รับเมื่ออายุ55ปีและสิ้นสุดสถานะ · ต่ำกว่า180เดือนเป็นบำเหน็จ",
+      "presentation": {
+        "title": "เงินสมทบชราภาพสะสม",
+        "pensionTitle": "บำนาญชราภาพ",
+        "balanceNote": "ไม่รวมผลตอบแทนและมาตรการเฉพาะพื้นที่",
+        "pensionDescription": "คำนวณจาก {rate}% ของฐานเงินสมทบเฉลี่ย\n({base} บาท/เดือน) ก่อนสิ้นสุดสถานะ",
+        "additionalLabel": "สมทบถึงอายุ {age} ปี ({months} เดือน)",
+        "totalLabel": "ยอดสมทบคาดการณ์เมื่ออายุ {age} ปี",
+        "forecastNote": "ไม่รวมผลตอบแทน"
+      }
+    },
+    {
+      "id": "unemployment",
+      "name": "ว่างงาน",
+      "sections": [
+        "33"
+      ],
+      "group": "ว่างงาน",
+      "gate": {
+        "min": 6,
+        "window": 15
+      },
+      "amount": {
+        "text": "เลิกจ้าง60% /ลาออก30%ของฐานค่าจ้าง",
+        "kind": "unemployment_formula",
+        "rates": {
+          "dismissed": 0.6,
+          "resigned": 0.3
+        },
+        "maxDays": {
+          "dismissed": 180,
+          "resigned": 90
+        }
+      },
+      "note": "ใช้เมื่อว่างงานตั้งแต่8วัน ขึ้นทะเบียนภายใน30วัน รายงานตัวอย่างน้อยเดือนละครั้ง พร้อมทำงานและไม่เข้าเหตุยกเว้น; เลิกจ้างไม่เกิน180วัน ลาออก/สิ้นสุดสัญญาไม่เกิน90วัน ตามข้อจำกัดปีปฏิทิน",
+      "sources": [
+        "unemployment2025",
+        "act"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2025-06-28",
+      "stage": "event",
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "ใช้เมื่อว่างงานตามเกณฑ์ · ขึ้นทะเบียน30วันและรายงานตัวทุกเดือน",
+      "presentation": {
+        "title": "ชดเชยกรณีว่างงาน",
+        "description": "",
+        "variants": [
+          {
+            "reason": "dismissed",
+            "label": "เลิกจ้าง (จ่าย {percent}% ไม่เกิน {days} วัน)"
+          },
+          {
+            "reason": "resigned",
+            "label": "ลาออก/หมดสัญญา (จ่าย {percent}% ไม่เกิน {days} วัน)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "m40_inpatient",
+      "name": "เจ็บป่วย:ผู้ป่วยใน",
+      "sections": [
+        "40"
+      ],
+      "group": "เจ็บป่วย",
+      "gate": {
+        "min": 3,
+        "window": 4
+      },
+      "amount": {
+        "text": "300บาท/วัน",
+        "kind": "daily_fixed",
+        "value": 300,
+        "unit": "THB/day"
+      },
+      "note": "พักโรงพยาบาลตั้งแต่1วัน รวมกับวันแพทย์สั่งพักไม่เกิน30วัน/ปีสำหรับทางเลือก1/2 หรือ90วัน/ปีสำหรับทางเลือก3",
+      "sources": [
+        "sso40base",
+        "sso40amend5"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2026-01-01",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "sharedCapGroup": "m40_sickness_days",
+      "sharedMaxDays": {
+        "1": 30,
+        "2": 30,
+        "3": 90
+      },
+      "shortNote": "นอนรพ.ตั้งแต่1วัน · รวมกับวันแพทย์สั่งพักใช้เพดานเดียวกัน",
+      "presentation": {
+        "title": "เงินชดเชยผู้ป่วยใน",
+        "description": "นอน รพ. อย่างน้อย 1 วัน"
+      }
+    },
+    {
+      "id": "m40_rest",
+      "name": "เจ็บป่วย:แพทย์สั่งพัก",
+      "sections": [
+        "40"
+      ],
+      "group": "เจ็บป่วย",
+      "gate": {
+        "min": 3,
+        "window": 4
+      },
+      "amount": {
+        "text": "200บาท/วัน",
+        "kind": "daily_fixed",
+        "value": 200,
+        "unit": "THB/day"
+      },
+      "note": "แพทย์สั่งพักตั้งแต่1วัน; โรคติดต่ออันตรายที่กฎหมายระบุต้องพักตั้งแต่3วัน ใช้เพดานวันร่วมกับผู้ป่วยใน",
+      "sources": [
+        "sso40base",
+        "sso40amend5"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2026-01-01",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "sharedCapGroup": "m40_sickness_days",
+      "sharedMaxDays": {
+        "1": 30,
+        "2": 30,
+        "3": 90
+      },
+      "shortNote": "พักตั้งแต่1วัน · ใช้เพดานร่วมกับผู้ป่วยใน; โรคติดต่ออันตรายมีเกณฑ์เฉพาะ",
+      "presentation": {
+        "title": "เงินชดเชยหยุดพัก",
+        "description": "แพทย์สั่งพักอย่างน้อย 1 วัน"
+      }
+    },
+    {
+      "id": "m40_visit",
+      "name": "พบแพทย์โดยไม่ได้นอนหรือสั่งพัก",
+      "sections": [
+        "40"
+      ],
+      "group": "เจ็บป่วย",
+      "gate": {
+        "min": 3,
+        "window": 4
+      },
+      "amount": {
+        "text": "200บาท/ครั้ง ไม่เกิน3ครั้ง/ปี",
+        "kind": "visit_fixed",
+        "value": 200,
+        "maxVisits": 3,
+        "unit": "THB/visit"
+      },
+      "note": "ต้องมีใบรับรองแพทย์ เป็นคนละกรณีกับการรับเงินผู้ป่วยในหรือแพทย์สั่งพัก",
+      "sources": [
+        "sso40amend5"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2026-01-01",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "มีใบรับรองแพทย์ · ไม่ซ้ำกับเงินผู้ป่วยใน/แพทย์สั่งพัก",
+      "presentation": {
+        "title": "เงินชดเชยพบแพทย์",
+        "description": "ไม่ได้นอน รพ. และแพทย์ไม่สั่งพัก · ไม่เกิน 3 ครั้ง/ปี",
+        "headline": "{amount.value} บาท/ครั้ง"
+      }
+    },
+    {
+      "id": "m40_disability",
+      "name": "ทุพพลภาพ",
+      "sections": [
+        "40"
+      ],
+      "group": "ทุพพลภาพ",
+      "gate": {
+        "min": 6,
+        "window": 10
+      },
+      "amount": {
+        "text": "1,000–3,000บาท/เดือน",
+        "kind": "m40_disability_tiers",
+        "tiers": [
+          {
+            "months": 6,
+            "window": 10,
+            "opt12": 1000,
+            "opt3": 1500
+          },
+          {
+            "months": 12,
+            "window": 20,
+            "opt12": 1300,
+            "opt3": 2000
+          },
+          {
+            "months": 24,
+            "window": 40,
+            "opt12": 1600,
+            "opt3": 2500
+          },
+          {
+            "months": 36,
+            "window": 60,
+            "opt12": 2000,
+            "opt3": 3000
+          }
+        ]
+      },
+      "note": "ตลอดชีวิตตามคำวินิจฉัยแพทย์ สปส. ระดับเงินขึ้นกับประวัติสมทบตามแต่ละช่วง",
+      "sources": [
+        "sso40base",
+        "sso40amend5"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2026-01-01",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "ตลอดชีวิตตามคำวินิจฉัย สปส. · อัตราขึ้นกับประวัติสมทบ",
+      "presentation": {
+        "title": "ทุพพลภาพ",
+        "description": "จ่ายตลอดชีวิต · ตามเดือนสมทบ"
+      }
+    },
+    {
+      "id": "m40_funeral",
+      "name": "ค่าทำศพ",
+      "sections": [
+        "40"
+      ],
+      "group": "เสียชีวิต",
+      "gate": {
+        "min": 6,
+        "window": 12
+      },
+      "amount": {
+        "text": "25,000หรือ50,000บาท",
+        "kind": "option_fixed",
+        "values": {
+          "1": 25000,
+          "2": 25000,
+          "3": 50000
+        },
+        "unit": "THB"
+      },
+      "note": "ปกติ6/12เดือน; อุบัติเหตุมีเกณฑ์1/6เดือน ผู้รับเงินทุพพลภาพมีเงื่อนไขเฉพาะ",
+      "sources": [
+        "sso40base",
+        "sso40amend2"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2021-02-11",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "exception": {
+        "min": 1,
+        "window": 6,
+        "note": "อุบัติเหตุหรือผู้รับเงินทุพพลภาพต้องพิจารณาแยก"
+      },
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "ปกติ6ใน12เดือน · อุบัติเหตุมีเกณฑ์1ใน6เดือน",
+      "presentation": {
+        "title": "ค่าทำศพ",
+        "description": ""
+      }
+    },
+    {
+      "id": "m40_death_extra",
+      "name": "เงินสงเคราะห์ตายเพิ่มเติม",
+      "sections": [
+        "40"
+      ],
+      "group": "เสียชีวิต",
+      "gate": {
+        "min": 60,
+        "window": null
+      },
+      "amount": {
+        "text": "8,000บาท",
+        "kind": "fixed_per_event",
+        "value": 8000,
+        "unit": "THB"
+      },
+      "note": "เฉพาะทางเลือก1/2 เมื่อส่งสมทบครบ60เดือนก่อนเดือนตาย จ่ายแก่ผู้มีสิทธิตามกฎหมาย",
+      "sources": [
+        "sso40base",
+        "sso40amend2"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2021-02-11",
+      "options": [
+        "1",
+        "2"
+      ],
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "เฉพาะทางเลือก1/2 · สมทบอย่างน้อย60เดือน",
+      "presentation": {
+        "title": "สงเคราะห์ตายเพิ่ม",
+        "description": "สมทบตั้งแต่ {gate.min} เดือน"
+      }
+    },
+    {
+      "id": "m40_child",
+      "name": "สงเคราะห์บุตร",
+      "sections": [
+        "40"
+      ],
+      "group": "สงเคราะห์บุตร",
+      "gate": {
+        "min": 24,
+        "window": 36
+      },
+      "amount": {
+        "text": "300บาท/คน/เดือน",
+        "kind": "monthly_child",
+        "value": 300,
+        "maxChildren": 2,
+        "unit": "THB/child/month",
+        "maxAge": 7
+      },
+      "note": "เฉพาะทางเลือก3 บุตรอายุไม่เกิน7ปี ไม่เกิน2คน ต้องส่งเงินในเดือนที่รับสิทธิด้วย ไม่รวมบุตรบุญธรรม/บุตรยกให้ผู้อื่นรับเป็นบุตรบุญธรรม",
+      "sources": [
+        "sso40base",
+        "sso40amend5"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": "2026-01-01",
+      "options": [
+        "3"
+      ],
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "อายุไม่เกิน7ปี ไม่เกิน2คน · ต้องส่งเดือนที่รับสิทธิด้วย",
+      "presentation": {
+        "title": "สงเคราะห์บุตร",
+        "description": "อายุไม่เกิน {amount.maxAge} ปี · สูงสุด {amount.maxChildren} คน"
+      }
+    },
+    {
+      "id": "m40_retirement",
+      "name": "ชราภาพ:บำเหน็จเงินก้อน",
+      "sections": [
+        "40"
+      ],
+      "group": "ชราภาพ",
+      "gate": {
+        "min": 0,
+        "window": null
+      },
+      "amount": {
+        "text": "เงินออม50หรือ150บาท/เดือน +ผลตอบแทน",
+        "kind": "m40_savings",
+        "allocations": {
+          "2": 50,
+          "3": 150
+        },
+        "bonusOption3": {
+          "months": 180,
+          "value": 10000
+        },
+        "additionalSavingMax": 1000
+      },
+      "note": "ทางเลือก2ออม50บาท/เดือน ทางเลือก3ออม150บาท/เดือน; ทางเลือก3ครบ180เดือนมีเพิ่ม10,000บาท รับเมื่ออายุ60ปีและไม่ประสงค์ส่งต่อ ออมเพิ่มได้ไม่เกิน1,000บาท/เดือน",
+      "sources": [
+        "sso40base"
+      ],
+      "reviewedAt": "2026-11-05",
+      "effectiveFrom": null,
+      "options": [
+        "2",
+        "3"
+      ],
+      "stage": "future",
+      "requiresActualHistory": true,
+      "claimDeadlineYears": 2,
+      "actualClaimRequiresEvent": true,
+      "shortNote": "เงินก้อนเมื่ออายุ60ปีและไม่ส่งต่อ · รวมผลตอบแทนและออมเพิ่มตามจริง",
+      "presentation": {
+        "title": "เงินออมชราภาพสะสม",
+        "description": "เงินก้อนเมื่ออายุ60ปีและไม่ส่งต่อ · รวมผลตอบแทนและออมเพิ่มตามจริง",
+        "balanceNote": "ยังไม่รวมผลตอบแทนและเงินออมเพิ่ม",
+        "bonusTitle": "เงินเพิ่มเมื่อส่งครบ {months} งวด",
+        "additionalLabel": "สมทบถึงอายุ {age} ปี ({months} เดือน)",
+        "totalLabel": "ยอดสมทบคาดการณ์เมื่ออายุ {age} ปี",
+        "forecastNote": "ไม่รวมผลตอบแทน"
+      }
+    }
+  ],
+  "bases": {
+    "section33": {
+      "max": 17500,
+      "min": 1650,
+      "contributionRate": 0.05,
+      "effectiveFrom": "2026-01-01",
+      "through": "2028-12-31",
+      "sourceIds": [
+        "wageCap"
+      ]
+    },
+    "section39": {
+      "monthly": 4800,
+      "contribution": 432,
+      "sourceIds": [
+        "section39"
+      ]
+    },
+    "dailyRule": "ม.33: ผลรวมฐานค่าจ้างสูงสุด3เดือนใน15เดือนก่อนเดือนเกิดสิทธิหาร90 ตามมาตรา57; ม.39:ใช้ฐานที่กำหนด ไม่ใช้เงินเดือนปัจจุบัน"
+  },
+  "retirementContributions": {
+    "base39": 4800,
+    "wageCaps": [
+      {
+        "from": "2000-01",
+        "min": 1650,
+        "max": 15000,
+        "sources": [
+          "wageCapSchedule",
+          "wageCapPrior"
+        ]
+      },
+      {
+        "from": "2026-01",
+        "min": 1650,
+        "max": 17500,
+        "sources": [
+          "wageCapSchedule",
+          "wageCap"
+        ]
+      },
+      {
+        "from": "2029-01",
+        "min": 1650,
+        "max": 20000,
+        "sources": [
+          "wageCapSchedule"
+        ]
+      },
+      {
+        "from": "2032-01",
+        "min": 1650,
+        "max": 23000,
+        "sources": [
+          "wageCapSchedule"
+        ]
+      }
+    ],
+    "rates": [
+      {
+        "from": "2000-01",
+        "through": "2002-12",
+        "employee33": 0.02,
+        "employer33": 0.02,
+        "member39": 0.04,
+        "sources": [
+          "earlyRetirement",
+          "rates2543",
+          "retirement2003"
+        ]
+      },
+      {
+        "from": "2003-01",
+        "through": "2009-06",
+        "employee33": 0.03,
+        "employer33": 0.03,
+        "member39": 0.06,
+        "sources": [
+          "retirement2003",
+          "retirement2009"
+        ]
+      },
+      {
+        "from": "2009-07",
+        "through": "2009-12",
+        "employee33": 0.02,
+        "employer33": 0.02,
+        "member39": 0.04,
+        "sources": [
+          "retirement2009"
+        ]
+      },
+      {
+        "from": "2010-01",
+        "through": "2011-12",
+        "employee33": 0.03,
+        "employer33": 0.03,
+        "member39": 0.06,
+        "sources": [
+          "retirement2009"
+        ]
+      },
+      {
+        "from": "2012-01",
+        "through": "2012-06",
+        "employee33": 0.02,
+        "employer33": 0.02,
+        "member39": 0.04,
+        "sources": [
+          "rates2555",
+          "act"
+        ]
+      },
+      {
+        "from": "2012-07",
+        "through": "2012-12",
+        "employee33": 0.03,
+        "employer33": 0.03,
+        "member39": 0.06,
+        "sources": [
+          "rates2555",
+          "act"
+        ]
+      },
+      {
+        "from": "2013-01",
+        "through": "2020-02",
+        "employee33": 0.03,
+        "employer33": 0.03,
+        "member39": 0.06,
+        "sources": [
+          "retirementRates2013",
+          "retirementRatePeriods"
+        ]
+      },
+      {
+        "from": "2020-06",
+        "through": "2020-08",
+        "employee33": 0.03,
+        "employer33": 0.03,
+        "member39": 0.06,
+        "sources": [
+          "retirementRates2013",
+          "retirementRatePeriods"
+        ]
+      },
+      {
+        "from": "2020-12",
+        "through": "2020-12",
+        "employee33": 0.03,
+        "employer33": 0.03,
+        "member39": 0.06,
+        "sources": [
+          "retirementRates2013",
+          "retirementRatePeriods"
+        ]
+      },
+      {
+        "from": "2021-01",
+        "through": "2021-01",
+        "employee33": 0.0185,
+        "employer33": 0.0185,
+        "member39": 0.037,
+        "sources": [
+          "rates2021Jan",
+          "retirement2021Feb"
+        ]
+      },
+      {
+        "from": "2021-02",
+        "through": "2021-03",
+        "employee33": 0.002,
+        "employer33": 0.027,
+        "member39": 0.004,
+        "sources": [
+          "retirement2021Feb",
+          "act"
+        ]
+      },
+      {
+        "from": "2021-04",
+        "through": "2021-05",
+        "employee33": 0.03,
+        "employer33": 0.03,
+        "member39": 0.06,
+        "sources": [
+          "retirementRates2013",
+          "retirementRatePeriods"
+        ]
+      },
+      {
+        "from": "2021-06",
+        "through": "2021-08",
+        "employee33": 0.0125,
+        "employer33": 0.0125,
+        "member39": 0.025,
+        "sources": [
+          "retirement2021Jun",
+          "retirement2021JunMinutes",
+          "act"
+        ]
+      },
+      {
+        "from": "2021-09",
+        "through": "2021-11",
+        "employee33": 0.0095,
+        "employer33": 0.0095,
+        "member39": 0.019,
+        "sources": [
+          "rates2021Sep",
+          "act"
+        ]
+      },
+      {
+        "from": "2021-12",
+        "through": "2022-04",
+        "employee33": 0.03,
+        "employer33": 0.03,
+        "member39": 0.06,
+        "sources": [
+          "retirementRates2013",
+          "retirementRatePeriods"
+        ]
+      },
+      {
+        "from": "2022-05",
+        "through": "2022-07",
+        "employee33": 0.0005,
+        "employer33": 0.0005,
+        "member39": 0.001,
+        "sources": [
+          "retirement2022May",
+          "act"
+        ]
+      },
+      {
+        "from": "2022-08",
+        "through": "2022-09",
+        "employee33": 0.03,
+        "employer33": 0.03,
+        "member39": 0.06,
+        "sources": [
+          "retirementRates2013",
+          "retirementRatePeriods"
+        ]
+      },
+      {
+        "from": "2022-10",
+        "through": "2022-12",
+        "employee33": 0.01,
+        "employer33": 0.01,
+        "member39": 0.02,
+        "sources": [
+          "retirementRates2022",
+          "retirementRatePeriods"
+        ]
+      },
+      {
+        "from": "2023-01",
+        "employee33": 0.03,
+        "employer33": 0.03,
+        "member39": 0.06,
+        "sources": [
+          "retirementRates2022",
+          "retirementRatePeriods"
+        ]
+      }
+    ],
+    "totalOnly": [
+      {
+        "from": "2020-03",
+        "through": "2020-05",
+        "employee33": 0.01,
+        "employer33": 0.04,
+        "member39Baht": 86,
+        "sources": [
+          "total2020Mar"
+        ]
+      },
+      {
+        "from": "2020-09",
+        "through": "2020-11",
+        "employee33": 0.02,
+        "employer33": 0.02,
+        "member39Baht": 96,
+        "sources": [
+          "total2020Sep"
+        ]
+      }
+    ],
+    "normalRates33": [
+      {
+        "from": "2000-01",
+        "through": "2002-12",
+        "employee33": 0.02,
+        "employer33": 0.02,
+        "sources": [
+          "earlyRetirement",
+          "rates2543"
+        ]
+      },
+      {
+        "from": "2003-01",
+        "employee33": 0.03,
+        "employer33": 0.03,
+        "sources": [
+          "retirement2003",
+          "retirementRates2022"
+        ]
+      }
+    ]
+  },
+  "screening": [
+    {
+      "name": "คัดกรองการได้ยิน",
+      "bands": [
+        [
+          "อายุตั้งแต่ 15 ปีขึ้นไป",
+          "1 ครั้ง/ปี",
+          15
+        ]
+      ]
+    },
+    {
+      "name": "ตรวจเต้านมโดยบุคลากรสุขภาพ",
+      "sex": "female",
+      "bands": [
+        [
+          "อายุ 30–39 ปี",
+          "1 ครั้ง/2 ปี",
+          30,
+          39
+        ],
+        [
+          "อายุตั้งแต่ 40 ปีขึ้นไป",
+          "1 ครั้ง/ปี",
+          40
+        ]
+      ]
+    },
+    {
+      "name": "ตรวจสายตาและวัดความดันตา",
+      "bands": [
+        [
+          "อายุ 40–54 ปี",
+          "1 ครั้ง/2 ปี",
+          40,
+          54
+        ],
+        [
+          "อายุตั้งแต่ 55 ปีขึ้นไป",
+          "1 ครั้ง/ปี",
+          55
+        ]
+      ]
+    },
+    {
+      "name": "ตรวจความสมบูรณ์ของเม็ดเลือด (CBC)",
+      "bands": [
+        [
+          "อายุ 15–34 ปี",
+          "1 ครั้ง",
+          15,
+          34
+        ],
+        [
+          "อายุตั้งแต่ 35 ปีขึ้นไป",
+          "1 ครั้ง/ปี",
+          35
+        ]
+      ]
+    },
+    {
+      "name": "ตรวจปัสสาวะ",
+      "bands": [
+        [
+          "อายุตั้งแต่ 35 ปีขึ้นไป",
+          "1 ครั้ง/ปี",
+          35
+        ]
+      ]
+    },
+    {
+      "name": "ตรวจน้ำตาลในเลือดหลังอดอาหาร",
+      "bands": [
+        [
+          "อายุตั้งแต่ 35 ปีขึ้นไป",
+          "1 ครั้ง/ปี",
+          35
+        ]
+      ]
+    },
+    {
+      "name": "ตรวจการทำงานของไต",
+      "bands": [
+        [
+          "อายุตั้งแต่ 35 ปีขึ้นไป",
+          "1 ครั้ง/ปี",
+          35
+        ]
+      ]
+    },
+    {
+      "name": "ตรวจไขมันรวมและไขมันดี (HDL)",
+      "bands": [
+        [
+          "อายุ 20–34 ปี",
+          "1 ครั้ง/5 ปี",
+          20,
+          34
+        ],
+        [
+          "อายุตั้งแต่ 35 ปีขึ้นไป",
+          "1 ครั้ง/ปี",
+          35
+        ]
+      ]
+    },
+    {
+      "name": "ตรวจไวรัสตับอักเสบบี (HBsAg)",
+      "bands": [
+        [
+          "สำหรับผู้เกิดก่อน พ.ศ. 2535"
+        ]
+      ]
+    },
+    {
+      "name": "คัดกรองมะเร็งปากมดลูกด้วย Pap smear",
+      "sex": "female",
+      "bands": [
+        [
+          "อายุตั้งแต่ 30 ปีขึ้นไป · ตรวจเซลล์ปากมดลูก",
+          "1 ครั้ง/3 ปี",
+          30
+        ]
+      ]
+    },
+    {
+      "name": "คัดกรองมะเร็งปากมดลูกด้วย VIA",
+      "sex": "female",
+      "bands": [
+        [
+          "อายุ 30–54 ปี · อายุ 55 ปีขึ้นไปใช้ Pap smear แทน VIA",
+          "1 ครั้ง/5 ปี",
+          30,
+          54
+        ]
+      ]
+    },
+    {
+      "name": "คัดกรองมะเร็งปากมดลูกด้วย HPV DNA",
+      "sex": "female",
+      "bands": [
+        [
+          "อายุตั้งแต่ 30 ปีขึ้นไป · ตรวจหาเชื้อ HPV ชนิดเสี่ยงสูง",
+          "1 ครั้ง/5 ปี",
+          30
+        ]
+      ]
+    },
+    {
+      "name": "คัดกรองมะเร็งลำไส้ใหญ่และลำไส้ตรง (FIT)",
+      "bands": [
+        [
+          "อายุตั้งแต่ 50 ปีขึ้นไป · ตรวจหาเลือดแฝงในอุจจาระ",
+          "1 ครั้ง/ปี",
+          50
+        ]
+      ]
+    },
+    {
+      "name": "เอกซเรย์ทรวงอก",
+      "bands": [
+        [
+          "อายุตั้งแต่ 15 ปีขึ้นไป",
+          "1 ครั้ง/3 ปี",
+          15
+        ]
+      ]
+    }
+  ],
+  "effectiveFrom": "2026-11-01",
+  "effectiveThrough": null,
+  "updates": [],
+  "calculation": {
+    "daysPerMonth": 30,
+    "retirementAge": 60
+  }
+}

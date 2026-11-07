@@ -1,0 +1,237 @@
+*{box-sizing:border-box}body{margin:0;background:#fafbf9;color:#25352e;font:15px/1.7 Tahoma,Arial,sans-serif}main,footer{max-width:680px;margin:auto;padding:0 24px}.page-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:28px 0 16px}.page-heading h1{font-size:25px;margin:0}.workspace{background:#fff;border:1px solid #e0e6dd;border-radius:15px;overflow:hidden}form{padding:26px}.segments{display:flex;gap:8px;margin-bottom:24px}button,input,select{font:inherit}button{cursor:pointer;min-height:42px}.segments button{flex:1;min-width:0;padding:10px 3px;border:1px solid #dce4d8;border-radius:8px;color:#50624e;background:#fff;font-size:14px}.segments button[aria-pressed=true]{color:#176b55;border-color:#176b55;background:#edf4ee;box-shadow:inset 0 0 0 1px #176b55}.segments small{display:block;font-size:11px;font-weight:normal}.segments button:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid #176b55;outline-offset:3px}label{display:block;font-size:13px;margin-bottom:18px}input,select{width:100%;max-width:100%;display:block;padding:11px 12px;border:1px solid #dbe2d8;border-radius:7px;background:#fff;color:#25352e;margin-top:7px;min-height:45px;font-size:15px}input:focus,select:focus{outline:2px solid #90b7a1;outline-offset:1px}[aria-invalid=true]{border-color:#a04731}.hint{font-size:11px;color:#65715f;margin:-10px 0 18px}.form-actions{display:flex;justify-content:space-between;align-items:center;gap:12px}.check{display:flex;gap:8px;align-items:center;font-size:12px;color:#65715f;margin:0}input[type=checkbox]{width:16px;height:16px;min-height:16px;margin:0;accent-color:#176b55}.text-btn{border:0;background:none;color:#65715f;font-size:12px;padding:7px 0}.form-error{color:#a04731;font-size:12px;background:#fcf0e8;border-radius:6px;padding:10px}.result-panel{background:#f2f6ef;border-top:1px solid #dce5d8;padding:25px 26px}.result-panel h2{font-size:18px;margin:0 0 6px}.overview-note,.empty-filter{font-size:12px;color:#65715f;margin:6px 0 16px}.group-heading{font-size:12px;margin:26px 0 0;color:#65715f;font-weight:normal}.benefit-row{padding:16px 0;border-bottom:1px solid #dce4d6}.benefit-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.benefit-row h3{margin:0;font-size:15px;font-weight:normal;color:#284f3b}.benefit-row .amount{font-size:18px;color:#176b55;font-weight:bold;margin:5px 0;line-height:1.6;overflow-wrap:anywhere}.basis,.benefit-note{font-size:12px;color:#5d6d55;margin:5px 0 0;overflow-wrap:anywhere}.benefit-status{font-size:10px;background:#f1eadb;color:#80653d;border-radius:5px;padding:2px 7px}details{font-size:12px;color:#65715f;padding-top:20px}summary{cursor:pointer;min-height:36px;list-style:none;display:flex;justify-content:space-between;gap:12px}summary:after{content:'+'}details[open]>summary:after{content:'−'}summary::-webkit-details-marker{display:none}footer{display:flex;justify-content:space-between;padding-top:18px;padding-bottom:24px;color:#65715f;font-size:10px}footer a{color:inherit;text-decoration:none}#install{font-size:12px;color:#176b55;background:#fff;border:1px solid #dbe3d8;border-radius:6px;padding:4px 12px}[hidden]{display:none!important}@media(max-width:480px){main,footer{padding-left:18px;padding-right:18px}.page-heading{margin-top:20px}.page-heading h1{font-size:23px}form,.result-panel{padding:21px}.segments small{font-size:10px}.benefit-row .amount{font-size:17px}}@media print{.page-heading,form,footer{display:none}.workspace{border:0}.result-panel{background:#fff}.benefit-row{break-inside:avoid}}
+
+.retirement-card{background:#e7efe0;border:1px solid #d4e0ca;border-radius:10px;padding:18px;margin:18px 0 24px}.retirement-card>h3{font-weight:bold;font-size:17px}.retirement-card label{margin:14px 0 8px}.retirement-card input{background:#fff}.retirement-card .amount{margin-top:16px}
+
+.compact-benefit{padding:8px 0}
+.compact-benefit .benefit-heading,.compact-benefit .benefit-rate{display:grid;grid-template-columns:minmax(0,1fr) fit-content(54%);align-items:baseline;gap:8px}
+.compact-benefit h3{font-size:14px;font-weight:600;line-height:1.45}
+.compact-benefit .amount{margin:0 0 0 auto;text-align:right;font-size:14px;line-height:1.45}
+.compact-benefit .benefit-note{margin:2px 0 0;line-height:1.45}
+.group-heading{margin-top:14px}
+@media(max-width:480px){
+  .result-panel{padding-inline:14px}
+  .compact-benefit .benefit-heading{column-gap:8px}
+  .compact-benefit h3,.compact-benefit .amount{font-size:13px}
+  .compact-benefit .benefit-note{font-size:11px}
+}
+.retirement-card{padding:12px 14px;margin:12px 0 16px}.retirement-card h3{font-weight:bold}.retirement-card .amount{margin:0 0 0 auto;text-align:right;font-size:14px}.retirement-card .basis{margin:2px 0 0}.retirement-card .benefit-heading{align-items:baseline;flex-wrap:wrap;gap:4px 8px}.retirement-card label{margin-bottom:0}
+
+#profile{margin:0 0 16px;padding:0 12px;border:1px solid #dbe2d8;border-radius:8px;min-width:0}#profile summary{min-height:42px;align-items:center;font-size:14px;font-weight:bold;color:#176b55}#profile[open] .profile-fields{padding-bottom:12px}#profile small{display:block;color:#65715f;font-size:11px;font-weight:normal}.profile-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.profile-fields label{margin:0}.profile-fields input,.profile-fields select{margin-top:3px}.profile-estimate{font-size:13px;color:#176b55;font-weight:bold;margin:2px 0 0}@media(max-width:480px){.profile-fields{grid-template-columns:1fr}}
+
+#profile #assessment-fields{padding:4px 0 10px}#profile #assessment-fields .hint{margin-bottom:0}
+
+.benefit-rates{margin-top:3px}
+.compact-benefit .benefit-rate{font-size:12px;color:#5d6d55}
+.benefit-rates .benefit-note + .benefit-rate{margin-top:4px}
+
+.compact-benefit .benefit-pending{font-size:12px;font-weight:normal;color:#5d6d55}
+.health-checks{padding-top:0}
+.health-checks summary{align-items:center;min-height:28px;color:#284f3b;font-size:14px;gap:8px}
+.health-checks summary span{margin-left:auto;color:#176b55}
+.health-checks summary .amount{white-space:nowrap}
+.health-checks ul{margin:8px 0;padding-left:18px}
+.health-checks li{margin:6px 0}
+.health-checks li strong{color:#284f3b}
+.health-checks .health-check-list{list-style:none;padding:0}
+.health-check-list li{border-top:1px solid #dce4d6;margin:0;padding:6px 0}
+.health-check-line{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:baseline;gap:8px}
+.health-check-line .amount{white-space:nowrap}
+
+.display-controls{display:flex;justify-content:space-between;align-items:center;padding-top:12px}
+.display-controls button{min-width:44px;min-height:44px;padding:0 9px;border:1px solid #dbe2d8;border-radius:8px;background:#fff;color:#176b55;font-weight:700}
+.display-controls .theme-toggle{font-size:21px;line-height:1}
+.account-panel{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 14px;border-bottom:1px solid #dbe2d8;font-size:12px}
+.account-panel span{overflow-wrap:anywhere}
+.account-panel a,.account-panel button{color:#176b55;font:inherit;font-weight:700}
+.account-panel button{background:none;border:0;white-space:nowrap}
+[data-theme=dark] .account-panel{border-color:#495c50}
+[data-theme=dark] .account-panel a,[data-theme=dark] .account-panel button{color:#9ee7c2}
+.display-controls+.page-heading,.display-controls+section .page-heading{margin-top:8px}
+:root[data-theme=dark]{color-scheme:dark}
+[data-theme=dark] body{background:#121b17;color:#eff5ef}
+[data-theme=dark] .workspace,
+[data-theme=dark] .display-controls button,
+[data-theme=dark] input,[data-theme=dark] select,
+[data-theme=dark] .segments button,[data-theme=dark] #install{
+  background:#1c2922;color:#eff5ef;border-color:#495c50
+}
+[data-theme=dark] .segments button[aria-pressed=true]{
+  background:#29483a;color:#b0f2d1;border-color:#8ad8b4;box-shadow:inset 0 0 0 1px #8ad8b4
+}
+[data-theme=dark] .result-panel{background:#18241e;border-color:#495c50}
+[data-theme=dark] .retirement-card{background:#24372b;border-color:#516959}
+[data-theme=dark] .benefit-row,[data-theme=dark] #profile,
+[data-theme=dark] .retirement-pension,[data-theme=dark] .retirement-forecast,
+[data-theme=dark] .health-check-list li{border-color:#495c50}
+[data-theme=dark] .result-panel .benefit-heading h3,
+[data-theme=dark] .result-panel .health-checks summary strong,
+[data-theme=dark] .result-panel .benefit-rate > span,
+[data-theme=dark] .result-panel .forecast-line > span,
+[data-theme=dark] .health-checks li strong{color:#eff5ef}
+[data-theme=dark] .result-panel .amount,
+[data-theme=dark] .retirement-card .retirement-balance,
+[data-theme=dark] .forecast-line strong,
+[data-theme=dark] #profile summary,
+[data-theme=dark] .display-controls button{color:#9ee7c2}
+[data-theme=dark] .result-panel .benefit-note,
+[data-theme=dark] .result-panel .basis,
+[data-theme=dark] .result-panel .benefit-pending,
+[data-theme=dark] .result-panel .health-check-line > span:not(.amount),
+[data-theme=dark] .hint,[data-theme=dark] .check,
+[data-theme=dark] .text-btn,[data-theme=dark] details,
+[data-theme=dark] .group-heading,[data-theme=dark] .empty-filter,
+[data-theme=dark] footer{color:#c2d0c4}
+[data-theme=dark] .form-error{background:#462b24;color:#ffd5c9}
+[data-theme=dark] :focus-visible{outline-color:#a4eac8}
+
+.retirement-card > .amount{margin-top:2px}
+.retirement-card .retirement-balance{margin-left:auto;color:#176b55;text-align:right;font-size:14px}
+.retirement-card .retirement-pension{border-top:1px solid #cfdcc7;margin-top:8px;padding-top:8px}
+
+.retirement-forecast{border-top:1px solid #cfdcc7;margin-top:8px;padding-top:6px}.forecast-line{display:flex;justify-content:space-between;gap:8px;font-size:12px}.forecast-line strong{color:#176b55;text-align:right}
+
+.result-panel:has(#result:empty){display:none}footer{justify-content:flex-end}
+.page-heading{display:grid;grid-template-columns:minmax(0,1fr);text-align:center}
+.page-heading .assessment-note{margin:0;font-size:11px;font-weight:400;line-height:1.5}
+.page-heading #install{justify-self:end}
+#profile-summary{white-space:nowrap}
+#result > h2{text-align:center}
+@media(max-width:480px){
+  html{scrollbar-width:none}
+  html::-webkit-scrollbar{display:none}
+}
+.result-panel{
+  --benefit-title-size:.78125rem;
+  --benefit-description-size:.6875rem;
+  --benefit-amount-size:.75rem;
+  --amount-column:44%;
+  --benefit-column-gap:12px;
+}
+.result-panel .benefit-heading h3,
+.result-panel .health-check-line > strong,
+.result-panel .health-checks summary strong,
+.result-panel .benefit-rate > span,
+.result-panel .forecast-line > span{
+  font-size:var(--benefit-title-size);
+  font-weight:700;
+  line-height:1.45;
+  color:#25352e;
+}
+.result-panel .amount,
+.result-panel .retirement-balance,
+.result-panel .forecast-line strong{
+  font-size:var(--benefit-amount-size);
+  font-weight:700;
+  line-height:1.45;
+  font-variant-numeric:tabular-nums;
+  margin:0 0 0 auto;
+  text-align:right;
+  white-space:normal;
+  overflow-wrap:break-word;
+}
+.result-panel .benefit-note,
+.result-panel .basis,
+.result-panel .benefit-pending,
+.result-panel .health-check-line > span:not(.amount){
+  font-size:var(--benefit-description-size);
+  font-weight:400;
+  line-height:1.5;
+  color:#52624e;
+}
+.result-panel .benefit-heading,
+.result-panel .benefit-rate,
+.result-panel .health-checks summary,
+.result-panel .health-check-line,
+.result-panel .forecast-line{
+  display:flex;
+  flex-wrap:wrap;
+  gap:2px var(--benefit-column-gap);
+  align-items:baseline;
+}
+.result-panel :is(.benefit-heading,.benefit-rate,.health-checks summary,.health-check-line,.forecast-line) > :first-child{
+  flex:1 0 calc(100% - var(--amount-column) - var(--benefit-column-gap));
+  min-width:0;
+  overflow-wrap:break-word;
+}
+.result-panel :is(.benefit-heading,.benefit-rate,.health-checks summary,.health-check-line,.forecast-line) > :nth-child(2):not(.money-amount){
+  flex:0 0 var(--amount-column);
+  min-width:0;
+}
+.result-panel :is(.benefit-heading,.benefit-rate,.forecast-line) > .money-amount{
+  flex-basis:auto;
+  min-width:var(--amount-column);
+  white-space:nowrap;
+  overflow-wrap:normal;
+}
+.result-panel .benefit-note,
+.result-panel .basis{
+  max-width:calc(100% - var(--amount-column) - var(--benefit-column-gap));
+  text-wrap:pretty;
+  overflow-wrap:break-word;
+}
+.result-panel .health-checks summary::after{content:none}
+.result-panel .retirement-card[data-benefit-id=pension] > .basis{max-width:none}
+.result-panel .retirement-forecast .forecast-line{--amount-column:28%}
+.result-panel .benefit-heading h3,
+.result-panel .benefit-note{white-space:pre-line}
+.result-panel [data-benefit-id=death_grant] > .benefit-note{max-width:none}
+.result-panel [data-benefit-id=unemployment] .benefit-rate > span{
+  font-size:11px;
+  font-weight:400;
+}
+.result-panel [data-benefit-id=disability] .benefit-rate > span{
+  font-size:11px;
+  font-weight:400;
+}
+.result-panel [data-benefit-id=prenatal] > .benefit-note,
+.result-panel [data-benefit-id=prenatal] .benefit-rate > span{
+  font-size:11px;
+  font-weight:400;
+}
+.result-panel [data-benefit-id=disability_medical] > .benefit-note,
+.result-panel [data-benefit-id=disability_medical] .benefit-rate > span{
+  font-size:11px;
+  font-weight:400;
+}
+.result-panel .benefit-row{
+  --benefit-surface:#ffffff;
+  --benefit-accent:#438c74;
+  position:relative;
+  isolation:isolate;
+}
+.result-panel .compact-benefit{
+  margin-block:12px;
+  padding-block:12px;
+  border-bottom:0;
+}
+.result-panel .benefit-row::before{
+  content:'';
+  position:absolute;
+  inset:0 -8px;
+  z-index:-1;
+  border-left:3px solid var(--benefit-accent);
+  border-radius:8px;
+  background:var(--benefit-surface);
+}
+.result-panel .compact-benefit:nth-of-type(even){
+  --benefit-surface:#e6f0eb;
+  --benefit-accent:#387d8e;
+}
+.result-panel .retirement-card{
+  --benefit-surface:#e7efe0;
+  --benefit-accent:#6d8c45;
+}
+[data-theme=dark] .result-panel .benefit-row{
+  --benefit-surface:#24362d;
+  --benefit-accent:#8ad2b2;
+}
+[data-theme=dark] .result-panel .compact-benefit:nth-of-type(even){
+  --benefit-surface:#20353a;
+  --benefit-accent:#8bc7d5;
+}
+[data-theme=dark] .result-panel .retirement-card{
+  --benefit-surface:#2c3b25;
+  --benefit-accent:#b1ce87;
+}
+.result-panel .health-checks summary strong::after{content:' +'}
+.result-panel .health-checks[open] summary strong::after{content:' −'}
