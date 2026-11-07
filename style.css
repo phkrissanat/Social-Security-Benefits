@@ -238,6 +238,7 @@
 
 @media(min-width:768px){
   main,footer{max-width:1360px;padding-inline:clamp(24px,4vw,48px)}
+  .page-heading #install{display:none}
   .page-heading h1{font-size:clamp(29px,3vw,36px)}
   .page-heading .assessment-note{font-size:14px}
   .segments button,.profile-fields input,.profile-fields select,#continuous{font-size:16px}
