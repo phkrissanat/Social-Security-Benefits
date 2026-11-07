@@ -4,7 +4,7 @@ import {initAccount} from './account.js';
 import {estimatePensionBase,estimateRetirementContributions,forecastRetirementContributions,renderRetirement,renderRetirementForecast} from './retirement.js';
 import {assessContinuous,amountDisplay,applicableBenefits} from './policy.js';
 import {validateCatalog,catalogForDate,catalogCovers,presentBenefit} from './catalog.js';
-import {readProfile} from './profile.js';
+import {loadDeviceProfile,saveDeviceProfile} from './profile.js?v=43';
 const $=s=>document.querySelector(s);function node(tag,text,parent){const el=document.createElement(tag);el.textContent=text;parent.append(el);return el}async function loadCatalog() {
   const response = await fetch('./catalog.json', { cache: 'no-cache' });
   if (!response.ok) throw Error('Catalog unavailable');
@@ -243,19 +243,21 @@ function moneyRow(benefit,parent,{future=false,possible=false}={}){
   }
 }
 function render(){const root=$('#result');healthChecksOpen=root.querySelector('.health-checks')?.open??healthChecksOpen;root.replaceChildren();error('');const field=$('#continuous');syncProfile(count(), $('#option').value);field.setAttribute('aria-invalid','false');$('#option-wrap').hidden=section!=='40';$('#continuous-label').textContent=section==='40'?'ส่งสมทบทางเลือกนี้ต่อเนื่อง (เดือน)':'ส่งสมทบ ม.33/39 ต่อเนื่อง (เดือน)';if(!catalogCovers(catalog,month,currentDate())){node('h2','ต้องอัปเดตกฎก่อนประเมิน',root);node('p','ยังไม่มีชุดกฎที่ตรวจทานสำหรับเดือนปัจจุบัน',root);return}if(!field.checkValidity()){field.setAttribute('aria-invalid','true');error('กรอกจำนวนเต็ม 0–1,200 เดือน');return}const n=count();if(n===null)return;const profileCatalog=$('#profile-sex').value==='male'?{...catalog,benefits:catalog.benefits.filter(b=>b.id!=='maternity_income')}:catalog;const result=assessContinuous(profileCatalog,{section,option:$('#option').value,months:n,month,date:currentDate()});const retirement = n > 0 && (section === '40' || n >= catalog.benefits.find(b=>b.id==='pension').amount.thresholdMonths) ? result.future[0] : null;const pension = section !== '40' && retirement;node('h2','ผ่านเกณฑ์เงินสมทบ '+(result.matched.length + Number(Boolean(pension)))+' รายการ',root);if(pension)moneyRow(retirement,root,{future:true});for(const benefit of result.matched)moneyRow(benefit,root);if(!result.matched.length)node('p','ช่วงที่กรอกยังไม่ถึงเกณฑ์เงินสมทบของรายการปกติ',root).className='empty-filter';if(result.possible.length){node('h3','กรณีที่ต้องพิจารณาข้อยกเว้น',root).className='group-heading';result.possible.forEach(b=>moneyRow(b,root,{possible:true}))}if(retirement && section === '40')moneyRow(retirement,root,{future:true});if(result.short.length){const detail=node('details','',root);node('summary','ยังไม่ถึงเกณฑ์จากช่วงที่กรอก '+result.short.length+' รายการ',detail);for(const b of result.short)node('p',b.name+' — อย่างน้อย '+b.gate.min+' เดือน'+(b.gate.window?' ใน '+b.gate.window+' เดือน':''),detail)}}
-const guestProfileKey = 'sithi-complete-v1';
+const guestProfileKey = 'guest';
 let profileKey = guestProfileKey;
+let profileLoad = 0;
 const profileFields = [...document.querySelectorAll('#profile input[id], #profile select[id]')]
   .filter(field => field.id !== 'continuous');
 
-function save() {
+async function save() {
+  const key = profileKey;
   try {
-    localStorage.setItem(profileKey, JSON.stringify({
+    await saveDeviceProfile(key, {
       section, option: $('#option').value, months: count(), asOf: month,
       fields: Object.fromEntries(profileFields.map(field => [field.id, field.value])),
-    }));
+    });
   } catch {
-    error('เบราว์เซอร์ไม่อนุญาตให้จำข้อมูล');
+    if (profileKey === key) error('เบราว์เซอร์ไม่อนุญาตให้จำข้อมูล');
   }
 }
 
@@ -265,24 +267,16 @@ function selectSection(value) {
     button.setAttribute('aria-pressed', String(button.dataset.section === section)));
 }
 
-function restoreProfile() {
-  try {
-    const saved = readProfile(localStorage.getItem(profileKey));
-    if (!saved || !['33', '39', '40'].includes(saved.section)) return;
-    selectSection(saved.section);
-    if (['1', '2', '3'].includes(saved.option)) $('#option').value = saved.option;
-    if (Number.isInteger(saved.months) && saved.months >= 0 && saved.months <= 1200) {
-      $('#continuous').value = saved.months;
-    }
-    const fields = saved.fields ?? {};
-    for (const field of profileFields) {
-      const value = fields[field.id];
-      if (typeof value !== 'string') continue;
-      if (field.tagName === 'SELECT' && ![...field.options].some(option => option.value === value)) continue;
-      field.value = value;
-    }
-  } catch {
-    // Start with the default form if storage is unavailable.
+function restoreProfile(saved) {
+  if (!saved) return;
+  selectSection(saved.section);
+  $('#option').value = saved.option;
+  if (saved.months !== null) $('#continuous').value = saved.months;
+  for (const field of profileFields) {
+    const value = saved.fields[field.id];
+    if (typeof value !== 'string') continue;
+    if (field.tagName === 'SELECT' && ![...field.options].some(option => option.value === value)) continue;
+    field.value = value;
   }
 }
 
@@ -302,11 +296,16 @@ function updateProfile() {
 form.addEventListener('input', updateProfile);
 form.addEventListener('change', updateProfile);
 form.inert = true;
-await initAccount($('.workspace'), userId => {
-  profileKey = userId ? guestProfileKey + ':' + userId : guestProfileKey;
+await initAccount($('.workspace'), async userId => {
+  const load = ++profileLoad;
+  profileKey = userId ? 'account:' + userId : guestProfileKey;
+  form.inert = true;
   form.reset();
+  $('#result').replaceChildren();
   selectSection('33');
-  restoreProfile();
+  const saved = await loadDeviceProfile(profileKey).catch(() => null);
+  if (load !== profileLoad) return;
+  restoreProfile(saved);
   $('#profile').open = count() === null;
   render();
   form.inert = false;

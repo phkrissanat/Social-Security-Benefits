@@ -12,3 +12,40 @@ export function readProfile(text) {
       !['__proto__','constructor','prototype'].includes(key)&&typeof value==='string')),
   };
 }
+
+let database;
+
+function deviceDatabase() {
+  if (!database) {
+    database = new Promise((resolve, reject) => {
+      const request = indexedDB.open('sithi-device-profiles', 1);
+      request.onupgradeneeded = () => request.result.createObjectStore('profiles');
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+      request.onblocked = () => reject(new Error('Profile storage is blocked'));
+    }).catch(error => {
+      database = undefined;
+      throw error;
+    });
+  }
+  return database;
+}
+
+export async function loadDeviceProfile(key) {
+  const db = await deviceDatabase();
+  return new Promise((resolve, reject) => {
+    const request = db.transaction('profiles').objectStore('profiles').get(key);
+    request.onsuccess = () => resolve(readProfile(request.result));
+    request.onerror = () => reject(request.error);
+  });
+}
+
+export async function saveDeviceProfile(key, profile) {
+  const db = await deviceDatabase();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction('profiles', 'readwrite');
+    transaction.oncomplete = () => resolve();
+    transaction.onabort = () => reject(transaction.error);
+    transaction.objectStore('profiles').put(JSON.stringify(profile), key);
+  });
+}
