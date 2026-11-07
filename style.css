@@ -176,21 +176,21 @@
 .result-panel .benefit-note{white-space:pre-line}
 .result-panel [data-benefit-id=death_grant] > .benefit-note{max-width:none}
 .result-panel [data-benefit-id=unemployment] .benefit-rate > span{
-  font-size:11px;
+  font-size:var(--benefit-description-size);
   font-weight:400;
 }
 .result-panel [data-benefit-id=disability] .benefit-rate > span{
-  font-size:11px;
+  font-size:var(--benefit-description-size);
   font-weight:400;
 }
 .result-panel [data-benefit-id=prenatal] > .benefit-note,
 .result-panel [data-benefit-id=prenatal] .benefit-rate > span{
-  font-size:11px;
+  font-size:var(--benefit-description-size);
   font-weight:400;
 }
 .result-panel [data-benefit-id=disability_medical] > .benefit-note,
 .result-panel [data-benefit-id=disability_medical] .benefit-rate > span{
-  font-size:11px;
+  font-size:var(--benefit-description-size);
   font-weight:400;
 }
 .result-panel .benefit-row{
@@ -235,3 +235,51 @@
 }
 .result-panel .health-checks summary strong::after{content:' +'}
 .result-panel .health-checks[open] summary strong::after{content:' −'}
+
+@media(min-width:768px){
+  main,footer{max-width:1360px;padding-inline:clamp(24px,4vw,48px)}
+  .page-heading h1{font-size:clamp(29px,3vw,36px)}
+  .page-heading .assessment-note{font-size:14px}
+  .segments button,.profile-fields input,.profile-fields select,#continuous{font-size:16px}
+  .segments small{font-size:13px}
+  form label,#profile summary{font-size:14px}
+  .result-panel{
+    --benefit-title-size:1rem;
+    --benefit-description-size:.875rem;
+    --benefit-amount-size:1rem;
+    --benefit-column-gap:16px;
+    padding:24px;
+  }
+  .result-panel h2{font-size:22px}
+  .result-panel .benefit-row{min-width:0;margin:0;padding:16px}
+  .result-panel .benefit-row::before{inset:0}
+  .result-panel .benefit-note,.result-panel .basis{max-width:none}
+  .result-panel .benefit-row + .benefit-row{margin-top:14px}
+  .result-panel :is(.benefit-heading,.benefit-rate,.health-checks summary,.health-check-line,.forecast-line):has(> :nth-child(2)){
+    display:grid;
+    grid-template-columns:minmax(0,1fr) fit-content(55%);
+  }
+  .result-panel :is(.benefit-heading,.benefit-rate,.health-checks summary,.health-check-line,.forecast-line):has(> .money-amount){
+    grid-template-columns:minmax(0,1fr) max-content;
+  }
+  .result-panel :is(.benefit-heading,.benefit-rate,.forecast-line) > .money-amount{min-width:0}
+  .result-panel .health-checks summary{min-height:36px}
+  .result-panel .benefit-note + .benefit-rate{margin-top:6px}
+}
+
+@media(min-width:900px){
+  #result{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+    align-items:start;
+  }
+  #result > :not(.benefit-row),
+  #result > .retirement-card,
+  #result > .benefit-row:has(.health-checks[open]){grid-column:1 / -1}
+  .result-panel .benefit-row + .benefit-row{margin-top:0}
+}
+
+@media(min-width:1200px){
+  .result-panel{--benefit-title-size:1.0625rem;--benefit-amount-size:1.0625rem}
+}
