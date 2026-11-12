@@ -203,12 +203,9 @@ export function benefitAdvice({status, section, option, age, endDate, today, une
       'Apply from age 55 after Section 33/39 coverage ends. At least 180 contribution months qualify for a pension. Shorter histories may qualify for a lump sum.',
     ]);
   }
-  if (ageKnown) {
+  if (ageKnown && age >= 60) {
     const amount = age >= 90 ? '1,000' : age >= 80 ? '800' : age >= 70 ? '700' : '600';
-    add('allowance', ['เบี้ยยังชีพผู้สูงอายุ', 'Older person’s allowance'], age < 60 ? [
-      'เริ่มที่ 600 บาท/เดือนเมื่ออายุครบ 60 ปีและเข้าเกณฑ์ ยืนยันสิทธิกับท้องถิ่นตามทะเบียนบ้าน',
-      'Starts at THB 600/month from age 60 if eligible. Confirm with your local authority.',
-    ] : [
+    add('allowance', ['เบี้ยยังชีพผู้สูงอายุ', 'Older person’s allowance'], [
       amount + ' บาท/เดือน หากเข้าเกณฑ์ ยืนยันสิทธิกับท้องถิ่นตามทะเบียนบ้าน',
       'THB ' + amount + '/month if eligible. Confirm with your local authority.',
     ]);
