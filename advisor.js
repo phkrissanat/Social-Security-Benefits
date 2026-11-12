@@ -102,9 +102,9 @@ export const workStatuses = [
 const endedStatuses = ['laid-off', 'resigned', 'contract-ended', 'retired'];
 const statusesBySection = {
   '33': ['', 'employed', 'planning', ...endedStatuses],
-  '39': ['', 'retired', 'self-employed', 'not-working'],
-  '40': ['', 'retired', 'self-employed', 'not-working'],
-  none: workStatuses.map(([value]) => value),
+  '39': ['', 'self-employed', 'not-working'],
+  '40': ['', 'self-employed', 'not-working'],
+  none: [''],
 };
 
 function parseDate(value) {
@@ -303,6 +303,7 @@ export function setupAdvisor(form, panel) {
     if (displayedSection !== profile.section) {
       const selected = status.value;
       const allowed = statusesBySection[profile.section];
+      status.closest('label').hidden = profile.section === 'none';
       status.replaceChildren(...options.filter(option => allowed.includes(option.value)));
       status.value = allowed.includes(selected) ? selected : '';
       displayedSection = profile.section;
