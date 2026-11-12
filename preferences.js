@@ -1,4 +1,4 @@
-import {english} from './translations.js?v=44';
+import {english} from './translations.js?v=45';
 
 const root = document.documentElement;
 const bar = document.createElement('nav');

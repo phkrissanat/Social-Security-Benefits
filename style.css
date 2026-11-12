@@ -322,3 +322,13 @@
 @media (min-width: 750px) {
   .advisor-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+.advisor-gold-card { grid-column: 1 / -1; }
+.advisor-services { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; margin: 10px 0 4px; }
+.advisor-services dt { font-size: .84rem; font-weight: 700; margin-top: 7px; }
+.advisor-services dd { font-size: .8rem; margin: 0 0 3px; }
+.advisor-references { font-size: .8rem; margin-top: 10px; }
+.advisor-references a { display: inline-block; margin: 4px 12px 0 0; text-decoration: underline; }
+@media (max-width: 560px) {
+  .segments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

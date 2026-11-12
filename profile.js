@@ -1,7 +1,7 @@
 export function readProfile(text) {
   let saved;
   try { saved=JSON.parse(text); } catch { return null; }
-  if (!saved || !['33','39','40'].includes(saved.section)) return null;
+  if (!saved || !['33','39','40','none'].includes(saved.section)) return null;
   const fields=saved.fields&&typeof saved.fields==='object'&&!Array.isArray(saved.fields)?saved.fields:{};
   return {
     section:saved.section,

@@ -1,6 +1,7 @@
-import {workStatuses} from './advisor.js?v=44';
+import {workStatuses} from './advisor.js?v=45';
 
 const phrases = new Map(`
+ไม่มีประกันสังคม|No Social Security
 สถานะการทำงาน|Employment status
 วันที่คาดว่าจะออกจากงาน|Expected last day of work
 วันที่สิ้นสุดการจ้าง|Employment end date

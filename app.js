@@ -1,11 +1,11 @@
 import {estimateCompensation} from './compensation.js';
-import './preferences.js?v=44';
-import {setupAdvisor} from './advisor.js?v=44';
+import './preferences.js?v=45';
+import {setupAdvisor} from './advisor.js?v=45';
 import {initAccount} from './account.js';
 import {estimatePensionBase,estimateRetirementContributions,forecastRetirementContributions,renderRetirement,renderRetirementForecast} from './retirement.js';
 import {assessContinuous,amountDisplay,applicableBenefits} from './policy.js';
 import {validateCatalog,catalogForDate,catalogCovers,presentBenefit} from './catalog.js';
-import {loadDeviceProfile,saveDeviceProfile} from './profile.js?v=43';
+import {loadDeviceProfile,saveDeviceProfile} from './profile.js?v=45';
 const $=s=>document.querySelector(s);function node(tag,text,parent){const el=document.createElement(tag);el.textContent=text;parent.append(el);return el}async function loadCatalog() {
   const response = await fetch('./catalog.json', { cache: 'no-cache' });
   if (!response.ok) throw Error('Catalog unavailable');
@@ -31,6 +31,7 @@ catalog = catalogForDate(catalogData,assessmentDate);
 let section='33';
 function count(){const field=$('#continuous');return field.value===''?null:Number(field.value)}function error(message){$('#form-error').textContent=message;$('#form-error').hidden=!message}
 function syncProfile(n, option) {
+  $('#assessment-fields').hidden = section === 'none';
   const validMonths = Number.isInteger(n) && n >= 0 && n <= 1200;
   const matched = validMonths ? applicableBenefits(catalog, section, option, assessmentDate).filter(benefit => n >= benefit.gate.min) : [];
   const has = (...ids) => matched.some(benefit => ids.includes(benefit.id));
@@ -256,11 +257,19 @@ function updateAdvice() {
     option: $('#option').value,
     age: profileNumber('#profile-age'),
     today: currentDate(),
+    unemployment: catalog.benefits.find(benefit => benefit.id === 'unemployment')?.amount,
   });
 }
 
 function render() {
   updateAdvice();
+  if (section === 'none') {
+    syncProfile(null, $('#option').value);
+    $('#option-wrap').hidden = true;
+    $('#result').replaceChildren();
+    error('');
+    return;
+  }
   renderAssessment();
 }
 
