@@ -100,6 +100,12 @@ export const workStatuses = [
 ];
 
 const endedStatuses = ['laid-off', 'resigned', 'contract-ended', 'retired'];
+const statusesBySection = {
+  '33': ['', 'employed', 'planning', ...endedStatuses],
+  '39': ['', 'retired', 'self-employed', 'not-working'],
+  '40': ['', 'retired', 'self-employed', 'not-working'],
+  none: workStatuses.map(([value]) => value),
+};
 
 function parseDate(value) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value ?? '')) return null;
@@ -129,6 +135,7 @@ export function employmentDateKind(status) {
 }
 
 export function benefitAdvice({status, section, option, age, endDate, today, unemployment}) {
+  if (!statusesBySection[section]?.includes(status)) status = '';
   const advice = [];
   const add = (id, title, detail, date, action) =>
     advice.push({id, title, detail, date: date && dateString(date), source: source[id], action});
@@ -268,7 +275,13 @@ export function setupAdvisor(form, panel) {
     planned: form.querySelector('#profile-planned-end'),
     actual: form.querySelector('#profile-ended'),
   };
-  for (const [value, thai] of workStatuses) status.add(new Option(thai, value));
+  const options = workStatuses.map(([value, thai]) => new Option(thai, value));
+  status.replaceChildren(...options);
+  let displayedSection;
+  form.addEventListener('reset', () => {
+    displayedSection = undefined;
+    status.replaceChildren(...options);
+  });
 
   const node = (parent, tag, content, className) => {
     const element = document.createElement(tag);
@@ -281,7 +294,20 @@ export function setupAdvisor(form, panel) {
   function render(profile) {
     const english = document.documentElement.lang === 'en';
     const language = Number(english);
-    const kind = employmentDateKind(status.value);
+    if (!english) {
+      options.forEach((option, index) => {
+        const thai = workStatuses[index][1];
+        if (option.textContent !== thai) option.textContent = thai;
+      });
+    }
+    if (displayedSection !== profile.section) {
+      const selected = status.value;
+      const allowed = statusesBySection[profile.section];
+      status.replaceChildren(...options.filter(option => allowed.includes(option.value)));
+      status.value = allowed.includes(selected) ? selected : '';
+      displayedSection = profile.section;
+    }
+    const kind = profile.section === '33' ? employmentDateKind(status.value) : null;
     for (const [type, field] of Object.entries(dateFields)) {
       field.closest('label').hidden = kind !== type;
     }
