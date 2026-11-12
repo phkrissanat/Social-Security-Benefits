@@ -1,5 +1,6 @@
 import {estimateCompensation} from './compensation.js';
-import './preferences.js';
+import './preferences.js?v=44';
+import {setupAdvisor} from './advisor.js?v=44';
 import {initAccount} from './account.js';
 import {estimatePensionBase,estimateRetirementContributions,forecastRetirementContributions,renderRetirement,renderRetirementForecast} from './retirement.js';
 import {assessContinuous,amountDisplay,applicableBenefits} from './policy.js';
@@ -35,8 +36,6 @@ function syncProfile(n, option) {
   const has = (...ids) => matched.some(benefit => ids.includes(benefit.id));
   const screening = has('screening');
   const maternity = has('maternity_income');
-  const ageNeeded = Boolean(screening || (validMonths && (section === '40' ? option !== '1' && n > 0 : n >= catalog.benefits.find(b=>b.id==='pension').amount.thresholdMonths)));
-  $('#profile-age').closest('label').hidden = !ageNeeded;
   $('#profile-sex').closest('label').hidden = !(maternity || screening);
   document.querySelectorAll('[data-profile]').forEach(label => {
     label.hidden = !label.dataset.profile.split(' ').includes(section);
@@ -242,10 +241,34 @@ function moneyRow(benefit,parent,{future=false,possible=false}={}){
     value.classList.toggle('money-value', right.includes('บาท'));
   }
 }
-function render(){const root=$('#result');healthChecksOpen=root.querySelector('.health-checks')?.open??healthChecksOpen;root.replaceChildren();error('');const field=$('#continuous');syncProfile(count(), $('#option').value);field.setAttribute('aria-invalid','false');$('#option-wrap').hidden=section!=='40';$('#continuous-label').textContent=section==='40'?'ส่งสมทบทางเลือกนี้ต่อเนื่อง (เดือน)':'ส่งสมทบ ม.33/39 ต่อเนื่อง (เดือน)';if(!catalogCovers(catalog,month,currentDate())){node('h2','ต้องอัปเดตกฎก่อนประเมิน',root);node('p','ยังไม่มีชุดกฎที่ตรวจทานสำหรับเดือนปัจจุบัน',root);return}if(!field.checkValidity()){field.setAttribute('aria-invalid','true');error('กรอกจำนวนเต็ม 0–1,200 เดือน');return}const n=count();if(n===null)return;const profileCatalog=$('#profile-sex').value==='male'?{...catalog,benefits:catalog.benefits.filter(b=>b.id!=='maternity_income')}:catalog;const result=assessContinuous(profileCatalog,{section,option:$('#option').value,months:n,month,date:currentDate()});const retirement = n > 0 && (section === '40' || n >= catalog.benefits.find(b=>b.id==='pension').amount.thresholdMonths) ? result.future[0] : null;const pension = section !== '40' && retirement;node('h2','ผ่านเกณฑ์เงินสมทบ '+(result.matched.length + Number(Boolean(pension)))+' รายการ',root);if(pension)moneyRow(retirement,root,{future:true});for(const benefit of result.matched)moneyRow(benefit,root);if(!result.matched.length)node('p','ช่วงที่กรอกยังไม่ถึงเกณฑ์เงินสมทบของรายการปกติ',root).className='empty-filter';if(result.possible.length){node('h3','กรณีที่ต้องพิจารณาข้อยกเว้น',root).className='group-heading';result.possible.forEach(b=>moneyRow(b,root,{possible:true}))}if(retirement && section === '40')moneyRow(retirement,root,{future:true});if(result.short.length){const detail=node('details','',root);node('summary','ยังไม่ถึงเกณฑ์จากช่วงที่กรอก '+result.short.length+' รายการ',detail);for(const b of result.short)node('p',b.name+' — อย่างน้อย '+b.gate.min+' เดือน'+(b.gate.window?' ใน '+b.gate.window+' เดือน':''),detail)}}
+function renderAssessment(){const root=$('#result');healthChecksOpen=root.querySelector('.health-checks')?.open??healthChecksOpen;root.replaceChildren();error('');const field=$('#continuous');syncProfile(count(), $('#option').value);field.setAttribute('aria-invalid','false');$('#option-wrap').hidden=section!=='40';$('#continuous-label').textContent=section==='40'?'ส่งสมทบทางเลือกนี้ต่อเนื่อง (เดือน)':'ส่งสมทบ ม.33/39 ต่อเนื่อง (เดือน)';if(!catalogCovers(catalog,month,currentDate())){node('h2','ต้องอัปเดตกฎก่อนประเมิน',root);node('p','ยังไม่มีชุดกฎที่ตรวจทานสำหรับเดือนปัจจุบัน',root);return}if(!field.checkValidity()){field.setAttribute('aria-invalid','true');error('กรอกจำนวนเต็ม 0–1,200 เดือน');return}const n=count();if(n===null)return;const profileCatalog=$('#profile-sex').value==='male'?{...catalog,benefits:catalog.benefits.filter(b=>b.id!=='maternity_income')}:catalog;const result=assessContinuous(profileCatalog,{section,option:$('#option').value,months:n,month,date:currentDate()});const retirement = n > 0 && (section === '40' || n >= catalog.benefits.find(b=>b.id==='pension').amount.thresholdMonths) ? result.future[0] : null;const pension = section !== '40' && retirement;node('h2','ผ่านเกณฑ์เงินสมทบ '+(result.matched.length + Number(Boolean(pension)))+' รายการ',root);if(pension)moneyRow(retirement,root,{future:true});for(const benefit of result.matched)moneyRow(benefit,root);if(!result.matched.length)node('p','ช่วงที่กรอกยังไม่ถึงเกณฑ์เงินสมทบของรายการปกติ',root).className='empty-filter';if(result.possible.length){node('h3','กรณีที่ต้องพิจารณาข้อยกเว้น',root).className='group-heading';result.possible.forEach(b=>moneyRow(b,root,{possible:true}))}if(retirement && section === '40')moneyRow(retirement,root,{future:true});if(result.short.length){const detail=node('details','',root);node('summary','ยังไม่ถึงเกณฑ์จากช่วงที่กรอก '+result.short.length+' รายการ',detail);for(const b of result.short)node('p',b.name+' — อย่างน้อย '+b.gate.min+' เดือน'+(b.gate.window?' ใน '+b.gate.window+' เดือน':''),detail)}}
 const guestProfileKey = 'guest';
 let profileKey = guestProfileKey;
 let profileLoad = 0;
+const form = $('#form');
+const advisor = $('#advisor');
+const renderAdvisor = setupAdvisor(form, advisor);
+
+function updateAdvice() {
+  if (form.inert) return;
+  renderAdvisor({
+    section,
+    option: $('#option').value,
+    age: profileNumber('#profile-age'),
+    today: currentDate(),
+  });
+}
+
+function render() {
+  updateAdvice();
+  renderAssessment();
+}
+
+new MutationObserver(updateAdvice).observe(document.documentElement, {
+  attributes: true,
+  attributeFilter: ['lang'],
+});
+
 const profileFields = [...document.querySelectorAll('#profile input[id], #profile select[id]')]
   .filter(field => field.id !== 'continuous');
 
@@ -287,7 +310,6 @@ document.querySelectorAll('[data-section]').forEach(button => {
     save();
   };
 });
-const form = $('#form');
 form.onsubmit = event => event.preventDefault();
 function updateProfile() {
   render();
@@ -302,13 +324,15 @@ await initAccount($('.workspace'), async userId => {
   form.inert = true;
   form.reset();
   $('#result').replaceChildren();
+  advisor.replaceChildren();
+  advisor.hidden = true;
   selectSection('33');
   const saved = await loadDeviceProfile(profileKey).catch(() => null);
   if (load !== profileLoad) return;
   restoreProfile(saved);
-  $('#profile').open = count() === null;
-  render();
+  $('#profile').open = count() === null && !$('#profile-work').value;
   form.inert = false;
+  render();
 });
 let installEvent;addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvent=e;$('#install').hidden=false});$('#install').onclick=async()=>{await installEvent?.prompt();$('#install').hidden=true};if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
 

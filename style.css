@@ -90,7 +90,7 @@
 
 .retirement-forecast{border-top:1px solid #cfdcc7;margin-top:8px;padding-top:6px}.forecast-line{display:flex;justify-content:space-between;gap:8px;font-size:12px}.forecast-line strong{color:#176b55;text-align:right}
 
-.result-panel:has(#result:empty){display:none}footer{justify-content:flex-end}
+.result-panel:has(#advisor[hidden] + #result:empty){display:none}footer{justify-content:flex-end}
 .page-heading{display:grid;grid-template-columns:minmax(0,1fr);text-align:center}
 .page-heading .assessment-note{margin:0;font-size:11px;font-weight:400;line-height:1.5}
 .page-heading #install{justify-self:end}
@@ -284,4 +284,41 @@
 
 @media(min-width:1200px){
   .result-panel{--benefit-title-size:1.0625rem;--benefit-amount-size:1.0625rem}
+}
+
+.benefit-advisor { margin-bottom: 24px; }
+.benefit-advisor h2 { margin: 0 0 14px; text-align: center; }
+.advisor-list {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.advisor-item {
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid #d5e2d9;
+  border-radius: 8px;
+  overflow-wrap: break-word;
+}
+.advisor-item h3 { margin: 0 0 3px; font-size: .96rem; }
+.advisor-item p { margin: 0 0 4px; font-size: .82rem; }
+.advisor-item a { display: inline-block; margin-inline-end: 12px; font-size: .78rem; text-decoration: underline; }
+.advisor-date { display: block; margin: 4px 0; font-weight: 700; font-size: .85rem; }
+.advisor-date[data-urgent=true] { color: #94391a; }
+.advisor-calendar {
+  padding: 6px 10px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .85rem;
+  cursor: pointer;
+}
+[data-theme=dark] .advisor-item { background: #213129; border-color: #495c50; }
+[data-theme=dark] .advisor-date[data-urgent=true] { color: #ffb39a; }
+@media (min-width: 750px) {
+  .advisor-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

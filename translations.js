@@ -1,4 +1,9 @@
+import {workStatuses} from './advisor.js?v=44';
+
 const phrases = new Map(`
+สถานะการทำงาน|Employment status
+วันที่คาดว่าจะออกจากงาน|Expected last day of work
+วันที่สิ้นสุดการจ้าง|Employment end date
 สิทธิประกันสังคม|Social Security Benefits
 ประเมินสิทธิเบื้องต้นตามประกาศของ สปส โปรดตรวจสอบกับหน่วยงานที่เกี่ยวข้องอีกครั้งเพื่อรับสิทธิ|Preliminary assessment based on Social Security Office announcements. Please confirm your eligibility with the relevant agency before claiming benefits.
 ประเมินสิทธิประกันสังคมจากข้อมูลที่คุณกรอก พร้อมแหล่งอ้างอิงทางการ|Estimate Thai Social Security benefits from your profile
@@ -236,6 +241,8 @@ const phrases = new Map(`
 เลิกจ้าง (จ่าย 60% ไม่เกิน 180 วัน)|Dismissal (60%, up to 180 days)
 ลาออก/หมดสัญญา (จ่าย 30% ไม่เกิน 90 วัน)|Resignation/contract end (30%, up to 90 days)
 `.trim().split('\n').map(line => line.split('|')));
+
+for (const [, thai, english] of workStatuses) phrases.set(thai, english);
 
 const patterns = [
   [/^50% ของค่าจ้าง\/วัน สูงสุด ([\d,.]+) บาท$/, '50% of daily wages, up to $1 THB'],
