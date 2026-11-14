@@ -269,6 +269,33 @@ export function reminderCalendar(items, today, now = new Date()) {
   return [...folded, 'END:VCALENDAR', ''].join('\r\n');
 }
 
+export function renderLegalDates(parent, dates, section) {
+  for (const {from, source, label, sections} of dates ?? []) {
+    if (sections && !sections.includes(section)) continue;
+    const row = document.createElement('div');
+    row.className = 'legal-date';
+    for (const [lang, locale, prefix] of [
+      ['th', 'th-TH', 'มีผล'],
+      ['en', 'en-GB', 'Effective'],
+    ]) {
+      const link = document.createElement('a');
+      link.lang = lang;
+      link.href = source;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.append(label ? label[lang] + ' · ' + prefix + ' ' : prefix + ' ');
+      const time = document.createElement('time');
+      time.dateTime = from;
+      time.textContent = new Intl.DateTimeFormat(locale, {
+        dateStyle: 'medium', timeZone: 'UTC',
+      }).format(parseDate(from));
+      link.append(time);
+      row.append(link);
+    }
+    parent.append(row);
+  }
+}
+
 export function setupAdvisor(form, panel) {
   const status = form.querySelector('#profile-work');
   const dateFields = {
@@ -334,6 +361,7 @@ export function setupAdvisor(form, panel) {
       const detail = item.detail[language];
       const row = node(list, 'li', '', 'advisor-item');
       node(row, 'h3', title);
+      renderLegalDates(row, profile.legalDates?.[item.id], profile.section);
       node(row, 'p', detail);
       if (item.payment) node(row, 'p', item.payment[language]);
       if (practicalDetails[item.id]) node(row, 'p', practicalDetails[item.id][language]);

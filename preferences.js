@@ -1,4 +1,4 @@
-import {english} from './translations.js?v=45';
+import {english} from './translations.js?v=46';
 
 const root = document.documentElement;
 const bar = document.createElement('nav');
@@ -32,7 +32,7 @@ const attributeTexts = [...document.querySelectorAll('[placeholder], [aria-label
 function translatePage(scope = document.body) {
   const walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT);
   for (let node = walker.nextNode(); node; node = walker.nextNode()) {
-    if (node.parentElement.closest('.display-controls,script,style')) continue;
+    if (node.parentElement.closest('.display-controls,.legal-date,script,style')) continue;
     if (!originalText.has(node)) originalText.set(node, node.data);
     const source = originalText.get(node);
     let translated = language === 'en' ? english(source) : source;

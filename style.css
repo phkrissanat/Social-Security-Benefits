@@ -305,6 +305,9 @@
 .advisor-item h3 { margin: 0 0 3px; font-size: .96rem; }
 .advisor-item p { margin: 0 0 4px; font-size: .82rem; }
 .advisor-item a { display: inline-block; margin-inline-end: 12px; font-size: .78rem; text-decoration: underline; }
+.legal-date { margin: 3px 0 5px; font-size: var(--benefit-description-size, 11px); line-height: 1.5; }
+.result-panel .legal-date a { color: inherit; margin: 0; font-size: inherit; text-decoration: underline; text-underline-offset: 2px; }
+html[lang=th] .legal-date [lang=en], html[lang=en] .legal-date [lang=th] { display: none; }
 .advisor-date { display: block; margin: 4px 0; font-weight: 700; font-size: .85rem; }
 .advisor-date[data-urgent=true] { color: #94391a; }
 .advisor-calendar {

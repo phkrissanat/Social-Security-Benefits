@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "version": "2026-11-07-hbsag-frequency",
-  "reviewedAt": "2026-11-05",
+  "version": "2026-11-14-effective-dates",
+  "reviewedAt": "2026-11-07",
   "scope": "สิทธิหลัก 7กรณีม.33 /6กรณีม.39 /3ทางเลือกม.40 และสิทธิรักษา-ทันตกรรมที่ใช้ทั่วไป ไม่ใช่ตารางเบิกจ่ายทุกหัตถการ",
   "sources": {
     "dental2026": {
@@ -63,7 +63,7 @@
       "status": "in_force"
     },
     "sso40amend5": {
-      "url": "https://www.sso.go.th/wpr/download/download_by_pool_file/45526",
+      "url": "https://drive.google.com/file/d/1VTOxS7OpY-HdT4ejwo3ZlU2e82teJ-pw/view",
       "publisher": "สำนักงานประกันสังคม / ราชกิจจานุเบกษา",
       "effectiveFrom": "2026-01-01",
       "status": "in_force"
@@ -81,7 +81,7 @@
       "status": "current_official_summary"
     },
     "healthCheck": {
-      "url": "https://www.prd.go.th/th/content/category/detail/id/39/iid/275285",
+      "url": "https://pathumthani.prd.go.th/th/content/category/detail/id/33/iid/275006",
       "publisher": "กรมประชาสัมพันธ์",
       "effectiveFrom": "2024-04-01",
       "status": "current_official_summary"
@@ -109,7 +109,7 @@
       "status": "citizen_guide"
     },
     "emergency": {
-      "url": "https://lb.mol.go.th/กรณีประสบอันตรายหรือบาดเจ็บฉุกเฉิน",
+      "url": "https://ratchakitcha.soc.go.th/documents/134484.pdf",
       "publisher": "กระทรวงแรงงาน",
       "status": "official_service_rules"
     },
@@ -230,7 +230,17 @@
         "title": "ค่ารักษาพยาบาล",
         "description": "เฉพาะบริการที่คุ้มครอง\nณ โรงพยาบาลตามสิทธิหรือเครือข่าย",
         "headline": "ไม่ต้องสำรองจ่าย"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "1990-09-02",
+          "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/2-พรบ.ประกันสังคม-พ.ศ.-2533.pdf",
+          "label": {
+            "th": "ฐานกฎหมายสิทธิรักษาพยาบาล",
+            "en": "Statutory basis for healthcare"
+          }
+        }
+      ]
     },
     {
       "id": "sick_income",
@@ -269,7 +279,28 @@
         "title": "ชดเชยหยุดงานกรณีเจ็บป่วย",
         "description": "",
         "sickDescription": "{amount.ratePercent}% ของค่าจ้าง/วัน\n{maximum}\nต่อเนื่องสูงสุด {amount.maxDays.perCase} วัน/ครั้ง\nและ รวมไม่เกิน {amount.maxDays.perYear} วัน/ปี\nกรณีเรื้อรัง ไม่เกิน {amount.maxDays.chronic} วัน/ปี"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "1990-09-02",
+          "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/2-พรบ.ประกันสังคม-พ.ศ.-2533.pdf",
+          "label": {
+            "th": "อัตราและจำนวนวันตาม ม.64",
+            "en": "Section 64 rate and duration"
+          }
+        },
+        {
+          "from": "2026-01-01",
+          "source": "https://thainews.prd.go.th/thainews/news/view/1741746/?bid=1",
+          "label": {
+            "th": "เพดานฐานค่าจ้าง ม.33",
+            "en": "Section 33 wage ceiling"
+          },
+          "sections": [
+            "33"
+          ]
+        }
+      ]
     },
     {
       "id": "emergency",
@@ -326,7 +357,25 @@
             "detail": "จนพ้นภาวะวิกฤต ภายใน 72 ชั่วโมง รวมวันหยุดราชการ"
           }
         ]
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2026-11-09",
+          "source": "https://ratchakitcha.soc.go.th/documents/134484.pdf",
+          "label": {
+            "th": "หลักเกณฑ์ สปส. ฉบับล่าสุดตามราชกิจจาฯ",
+            "en": "Latest SSO rules published in the Gazette"
+          }
+        },
+        {
+          "from": "2017-04-01",
+          "source": "https://spd.moph.go.th/wp-content/uploads/2022/08/PDF03-1.pdf",
+          "label": {
+            "th": "เริ่มคุ้มครองฉุกเฉินวิกฤต (UCEP)",
+            "en": "UCEP critical emergency coverage"
+          }
+        }
+      ]
     },
     {
       "id": "dental_basic",
@@ -358,7 +407,13 @@
       "presentation": {
         "title": "อุด/ถอน/ขูดหินปูน",
         "description": "วงเงินเอกชน\nรพ.รัฐคู่สัญญา ตามเกณฑ์"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2026-05-01",
+          "source": "https://www.sso.go.th/wpr/assets/upload/files_storage/sso_th/a2bf8d1905c7df16590b07008be93ff6.pdf"
+        }
+      ]
     },
     {
       "id": "dental_wisdom",
@@ -391,7 +446,13 @@
       "presentation": {
         "title": "ผ่าฟันคุด",
         "description": "แยกจากวงเงิน {benefits.dental_basic.amount.value} บาท/ปี"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2026-05-01",
+          "source": "https://www.sso.go.th/wpr/assets/upload/files_storage/sso_th/a2bf8d1905c7df16590b07008be93ff6.pdf"
+        }
+      ]
     },
     {
       "id": "dentures",
@@ -433,7 +494,13 @@
           }
         ],
         "showHeadline": true
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2026-05-01",
+          "source": "https://www.sso.go.th/wpr/assets/upload/files_storage/sso_th/a2bf8d1905c7df16590b07008be93ff6.pdf"
+        }
+      ]
     },
     {
       "id": "implants",
@@ -480,7 +547,13 @@
           }
         ],
         "showHeadline": true
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2026-05-01",
+          "source": "https://www.sso.go.th/wpr/assets/upload/files_storage/sso_th/a2bf8d1905c7df16590b07008be93ff6.pdf"
+        }
+      ]
     },
     {
       "id": "screening",
@@ -510,7 +583,17 @@
       "presentation": {
         "title": "ตรวจสุขภาพ",
         "description": "ตามช่วงอายุ เพศ และความถี่ที่กำหนด ไม่ใช่เงินสด"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2024-04-01",
+          "source": "https://pathumthani.prd.go.th/th/content/category/detail/id/33/iid/275006",
+          "label": {
+            "th": "ชุดรายการตรวจและรอบตรวจ",
+            "en": "Screening schedule"
+          }
+        }
+      ]
     },
     {
       "id": "prenatal",
@@ -576,7 +659,17 @@
           }
         ],
         "showHeadline": true
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2021-01-01",
+          "source": "https://info.go.th/procedure/94e56d2e-d99b-4a3a-91d9-4f3043a5d01c/view?lat=13.7588311&lng=100.5405449",
+          "label": {
+            "th": "วงเงินฝากครรภ์",
+            "en": "Prenatal care allowance"
+          }
+        }
+      ]
     },
     {
       "id": "birth",
@@ -609,7 +702,17 @@
       "presentation": {
         "title": "ค่าคลอดบุตร",
         "description": "คู่สมรสใช้สิทธิฝ่ายเดียว"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2021-01-01",
+          "source": "https://info.go.th/procedure/94e56d2e-d99b-4a3a-91d9-4f3043a5d01c/view?lat=13.7588311&lng=100.5405449",
+          "label": {
+            "th": "ค่าคลอด 15,000 บาท",
+            "en": "THB 15,000 childbirth allowance"
+          }
+        }
+      ]
     },
     {
       "id": "maternity_income",
@@ -644,7 +747,28 @@
       "presentation": {
         "title": "เงินทดแทนคลอดบุตร",
         "description": "คิด {amount.ratePercent}% ของฐานรายวัน เป็นเวลา {amount.days} วัน · ไม่เกิน 2 ครั้ง"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2015-10-20",
+          "source": "https://www.sso.go.th/wpr/main/service/กองทุนประกันสังคม_detail_detail_1_125_699/238_238",
+          "label": {
+            "th": "เกณฑ์ 90 วัน ไม่เกิน 2 ครั้ง",
+            "en": "90 days, up to two births"
+          }
+        },
+        {
+          "from": "2026-01-01",
+          "source": "https://thainews.prd.go.th/thainews/news/view/1741746/?bid=1",
+          "label": {
+            "th": "เพดานฐานค่าจ้าง ม.33",
+            "en": "Section 33 wage ceiling"
+          },
+          "sections": [
+            "33"
+          ]
+        }
+      ]
     },
     {
       "id": "child",
@@ -678,7 +802,17 @@
       "presentation": {
         "title": "สงเคราะห์บุตร",
         "description": "ถึงอายุ {amount.maxAge} ปี · สูงสุด {amount.maxChildren} คน"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2025-01-01",
+          "source": "https://ratchakitcha.soc.go.th/documents/54513.pdf",
+          "label": {
+            "th": "อัตรา 1,000 บาทต่อเดือน",
+            "en": "THB 1,000 monthly rate"
+          }
+        }
+      ]
     },
     {
       "id": "disability",
@@ -722,7 +856,28 @@
             "label": "รุนแรง (ตลอดชีวิต)"
           }
         ]
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2015-10-20",
+          "source": "https://nlrc.mol.go.th/research/SHZPyi0/03SHZPyi0.pdf",
+          "label": {
+            "th": "เกณฑ์แยกตามระดับทุพพลภาพ",
+            "en": "Rules by degree of disability"
+          }
+        },
+        {
+          "from": "2026-01-01",
+          "source": "https://thainews.prd.go.th/thainews/news/view/1741746/?bid=1",
+          "label": {
+            "th": "เพดานฐานค่าจ้าง ม.33",
+            "en": "Section 33 wage ceiling"
+          },
+          "sections": [
+            "33"
+          ]
+        }
+      ]
     },
     {
       "id": "disability_medical",
@@ -775,7 +930,13 @@
             "unit": "/เดือน"
           }
         ]
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2022-03-01",
+          "source": "https://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/171/T_0071.PDF"
+        }
+      ]
     },
     {
       "id": "funeral",
@@ -808,7 +969,17 @@
       "presentation": {
         "title": "ค่าจัดการศพ",
         "description": "จ่ายให้ผู้จัดการศพ"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2020-07-02",
+          "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2020/07/กรกฎาคม-2563.pdf",
+          "label": {
+            "th": "อัตรา 50,000 บาท",
+            "en": "THB 50,000 rate"
+          }
+        }
+      ]
     },
     {
       "id": "death_grant",
@@ -849,7 +1020,28 @@
       "presentation": {
         "title": "สงเคราะห์กรณีเสียชีวิต",
         "description": "คำนวณจาก {amount.ratePercent}% ของฐานค่าจ้าง\nส่งเงินสมทบ {amount.tiers.0.months}–{amount.firstTierEnd} เดือน ได้ {amount.tiers.0.multiplier} เท่า\nส่งเงินสมทบ ตั้งแต่ {amount.tiers.1.months} เดือน ได้ {amount.tiers.1.multiplier} เท่า"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2015-10-20",
+          "source": "https://www.sso.go.th/wpr/main/service/กองทุนประกันสังคม_detail_detail_1_125_699/238_238",
+          "label": {
+            "th": "เกณฑ์จ่ายตามจำนวนเดือนสมทบ",
+            "en": "Rates by contribution history"
+          }
+        },
+        {
+          "from": "2026-01-01",
+          "source": "https://thainews.prd.go.th/thainews/news/view/1741746/?bid=1",
+          "label": {
+            "th": "เพดานฐานค่าจ้าง ม.33",
+            "en": "Section 33 wage ceiling"
+          },
+          "sections": [
+            "33"
+          ]
+        }
+      ]
     },
     {
       "id": "pension",
@@ -892,7 +1084,17 @@
         "additionalLabel": "สมทบถึงอายุ {age} ปี ({months} เดือน)",
         "totalLabel": "ยอดสมทบคาดการณ์เมื่ออายุ {age} ปี",
         "forecastNote": "ไม่รวมผลตอบแทน"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2007-09-15",
+          "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/15-กฎกระทรวง-กำหนดหลักเกณฑ์-วิธีการ-ระยะเวลา-อัตราการจ่ายปย.ทดแทนในกรณีชราภาพ-พ.ศ.-2550.pdf",
+          "label": {
+            "th": "สูตรบำนาญ 60 เดือนสุดท้าย",
+            "en": "60-month pension formula"
+          }
+        }
+      ]
     },
     {
       "id": "unemployment",
@@ -941,7 +1143,36 @@
             "label": "ลาออก/หมดสัญญา (จ่าย {percent}% ไม่เกิน {days} วัน)"
           }
         ]
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2025-06-28",
+          "source": "https://www.phum.go.th/index/add_file/8aO8fFdTue112720.pdf",
+          "label": {
+            "th": "เลิกจ้าง 60%",
+            "en": "Dismissal at 60%"
+          }
+        },
+        {
+          "from": "2004-01-01",
+          "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/9-กฎกระทรวง-กำหนดหลักเกณฑ์และอัตราการได้รับปย.ทดแทนในกรณีว่างงาน-พ.ศ.-2547.pdf",
+          "label": {
+            "th": "ลาออกหรือหมดสัญญา 30%",
+            "en": "Resignation or contract expiry at 30%"
+          }
+        },
+        {
+          "from": "2026-01-01",
+          "source": "https://thainews.prd.go.th/thainews/news/view/1741746/?bid=1",
+          "label": {
+            "th": "เพดานฐานค่าจ้าง ม.33",
+            "en": "Section 33 wage ceiling"
+          },
+          "sections": [
+            "33"
+          ]
+        }
+      ]
     },
     {
       "id": "m40_inpatient",
@@ -984,7 +1215,17 @@
       "presentation": {
         "title": "เงินชดเชยผู้ป่วยใน",
         "description": "นอน รพ. อย่างน้อย 1 วัน"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2018-03-28",
+          "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/5-พรฎ.กำหนดหลักเกณฑ์-อัตราการจ่ายเงินสมทบ-ประเภทประโยชน์ทดแทน-ม.40.pdf",
+          "label": {
+            "th": "อัตราผู้ป่วยใน 300 บาทต่อวัน",
+            "en": "THB 300 daily inpatient rate"
+          }
+        }
+      ]
     },
     {
       "id": "m40_rest",
@@ -1027,7 +1268,17 @@
       "presentation": {
         "title": "เงินชดเชยหยุดพัก",
         "description": "แพทย์สั่งพักอย่างน้อย 1 วัน"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2026-01-01",
+          "source": "https://drive.google.com/file/d/1VTOxS7OpY-HdT4ejwo3ZlU2e82teJ-pw/view",
+          "label": {
+            "th": "แพทย์สั่งพักตั้งแต่ 1 วัน",
+            "en": "Doctor-ordered rest from one day"
+          }
+        }
+      ]
     },
     {
       "id": "m40_visit",
@@ -1065,7 +1316,17 @@
         "title": "เงินชดเชยพบแพทย์",
         "description": "ไม่ได้นอน รพ. และแพทย์ไม่สั่งพัก · ไม่เกิน 3 ครั้ง/ปี",
         "headline": "{amount.value} บาท/ครั้ง"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2026-01-01",
+          "source": "https://drive.google.com/file/d/1VTOxS7OpY-HdT4ejwo3ZlU2e82teJ-pw/view",
+          "label": {
+            "th": "พบแพทย์ 200 บาทต่อครั้ง",
+            "en": "THB 200 per visit"
+          }
+        }
+      ]
     },
     {
       "id": "m40_disability",
@@ -1126,7 +1387,17 @@
       "presentation": {
         "title": "ทุพพลภาพ",
         "description": "จ่ายตลอดชีวิต · ตามเดือนสมทบ"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2026-01-01",
+          "source": "https://drive.google.com/file/d/1VTOxS7OpY-HdT4ejwo3ZlU2e82teJ-pw/view",
+          "label": {
+            "th": "อัตราใหม่และจ่ายตลอดชีวิต",
+            "en": "Updated rates and lifetime payment"
+          }
+        }
+      ]
     },
     {
       "id": "m40_funeral",
@@ -1172,7 +1443,13 @@
       "presentation": {
         "title": "ค่าทำศพ",
         "description": ""
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2021-02-11",
+          "source": "https://www.sso.go.th/wpr/download/download_by_pool_file/13912"
+        }
+      ]
     },
     {
       "id": "m40_death_extra",
@@ -1208,7 +1485,13 @@
       "presentation": {
         "title": "สงเคราะห์ตายเพิ่ม",
         "description": "สมทบตั้งแต่ {gate.min} เดือน"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2021-02-11",
+          "source": "https://www.sso.go.th/wpr/download/download_by_pool_file/13912"
+        }
+      ]
     },
     {
       "id": "m40_child",
@@ -1245,7 +1528,17 @@
       "presentation": {
         "title": "สงเคราะห์บุตร",
         "description": "อายุไม่เกิน {amount.maxAge} ปี · สูงสุด {amount.maxChildren} คน"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2026-01-01",
+          "source": "https://drive.google.com/file/d/1VTOxS7OpY-HdT4ejwo3ZlU2e82teJ-pw/view",
+          "label": {
+            "th": "อัตรา 300 บาทและเกณฑ์อายุบุตร",
+            "en": "THB 300 rate and child age limit"
+          }
+        }
+      ]
     },
     {
       "id": "m40_retirement",
@@ -1294,7 +1587,17 @@
         "additionalLabel": "สมทบถึงอายุ {age} ปี ({months} เดือน)",
         "totalLabel": "ยอดสมทบคาดการณ์เมื่ออายุ {age} ปี",
         "forecastNote": "ไม่รวมผลตอบแทน"
-      }
+      },
+      "legalDates": [
+        {
+          "from": "2018-03-28",
+          "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/5-พรฎ.กำหนดหลักเกณฑ์-อัตราการจ่ายเงินสมทบ-ประเภทประโยชน์ทดแทน-ม.40.pdf",
+          "label": {
+            "th": "เงินสะสมและเกณฑ์บำเหน็จ",
+            "en": "Savings and lump-sum rules"
+          }
+        }
+      ]
     }
   ],
   "bases": {
@@ -1785,5 +2088,164 @@
   "calculation": {
     "daysPerMonth": 30,
     "retirementAge": 60
+  },
+  "advisorDates": {
+    "unemployment": [
+      {
+        "from": "2025-06-28",
+        "source": "https://www.phum.go.th/index/add_file/8aO8fFdTue112720.pdf",
+        "label": {
+          "th": "เลิกจ้าง 60%",
+          "en": "Dismissal at 60%"
+        }
+      },
+      {
+        "from": "2004-01-01",
+        "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/9-กฎกระทรวง-กำหนดหลักเกณฑ์และอัตราการได้รับปย.ทดแทนในกรณีว่างงาน-พ.ศ.-2547.pdf",
+        "label": {
+          "th": "ลาออกหรือหมดสัญญา 30%",
+          "en": "Resignation or contract expiry at 30%"
+        }
+      },
+      {
+        "from": "2026-01-01",
+        "source": "https://thainews.prd.go.th/thainews/news/view/1741746/?bid=1",
+        "label": {
+          "th": "เพดานฐานค่าจ้าง ม.33",
+          "en": "Section 33 wage ceiling"
+        },
+        "sections": [
+          "33"
+        ]
+      }
+    ],
+    "continuation": [
+      {
+        "from": "1995-03-30",
+        "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/3-พรบ.ประกันสังคม-ฉ.2-พ.ศ.-2537.pdf",
+        "label": {
+          "th": "เกณฑ์สมัคร ม.39 ภายใน 6 เดือน",
+          "en": "Six-month Section 39 application window"
+        }
+      }
+    ],
+    "health": [
+      {
+        "from": "1995-03-30",
+        "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/3-พรบ.ประกันสังคม-ฉ.2-พ.ศ.-2537.pdf",
+        "label": {
+          "th": "สิทธิรักษาต่อ 6 เดือนตาม ม.38",
+          "en": "Six months of extended coverage under Section 38"
+        }
+      }
+    ],
+    "severance": [
+      {
+        "from": "2017-09-01",
+        "source": "https://infocenter.oic.go.th/เทศบาลเมืองตาคลี%20จังหวัดนครสวรรค์/topic-detail.php?conid=5175919",
+        "label": {
+          "th": "ค่าชดเชยกรณีเกษียณ",
+          "en": "Retirement severance"
+        }
+      },
+      {
+        "from": "2019-05-05",
+        "source": "https://ratchakitcha.soc.go.th/documents/17076199.pdf",
+        "label": {
+          "th": "อัตรา 400 วันเมื่อทำงานครบ 20 ปี",
+          "en": "400-day rate after 20 years"
+        }
+      }
+    ],
+    "leave": [
+      {
+        "from": "1998-08-19",
+        "source": "https://www.mol.go.th/employee/สิทธิหน้าที่นายจ้าง-ลูกจ้าง",
+        "label": {
+          "th": "หลักเกณฑ์ค่าจ้างวันพักร้อน",
+          "en": "Annual leave pay rules"
+        }
+      }
+    ],
+    "provident": [
+      {
+        "from": "1987-12-08",
+        "source": "https://www.sec.or.th/TH/Documents/ActandRoyalEnactment/Act/act-pvd2530-codified.pdf",
+        "label": {
+          "th": "ฐานกฎหมายกองทุน",
+          "en": "Statutory basis for the fund"
+        }
+      }
+    ],
+    "unpaid": [
+      {
+        "from": "1998-08-19",
+        "source": "https://www.mol.go.th/employee/employee_fund",
+        "label": {
+          "th": "ฐานกฎหมายกองทุน",
+          "en": "Statutory basis for the fund"
+        }
+      }
+    ],
+    "occupational": [
+      {
+        "from": "1994-07-01",
+        "source": "https://www.ratchakitcha.soc.go.th/DATA/PDF/2537/A/028/3.PDF",
+        "label": {
+          "th": "ฐานกฎหมายเงินทดแทน",
+          "en": "Statutory basis for workers’ compensation"
+        }
+      }
+    ],
+    "goldCard": [
+      {
+        "from": "2002-11-19",
+        "source": "https://www.ocs.go.th/searchlaw/law-index/item/442",
+        "label": {
+          "th": "ฐานกฎหมายสิทธิบัตรทอง",
+          "en": "Statutory basis for Gold Card coverage"
+        }
+      }
+    ],
+    "oldAge": [
+      {
+        "from": "2007-09-15",
+        "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/15-กฎกระทรวง-กำหนดหลักเกณฑ์-วิธีการ-ระยะเวลา-อัตราการจ่ายปย.ทดแทนในกรณีชราภาพ-พ.ศ.-2550.pdf",
+        "label": {
+          "th": "สูตรบำนาญ 60 เดือนสุดท้าย",
+          "en": "60-month pension formula"
+        }
+      }
+    ],
+    "oldAge40": [
+      {
+        "from": "2018-03-28",
+        "source": "https://www.mol.go.th/wp-content/uploads/sites/2/2021/02/5-พรฎ.กำหนดหลักเกณฑ์-อัตราการจ่ายเงินสมทบ-ประเภทประโยชน์ทดแทน-ม.40.pdf",
+        "label": {
+          "th": "เงินสะสมและเกณฑ์บำเหน็จ",
+          "en": "Savings and lump-sum rules"
+        }
+      }
+    ],
+    "allowance": [
+      {
+        "from": "2023-08-12",
+        "source": "https://www.prd.go.th/th/content/category/detail/id/9/iid/206140",
+        "label": {
+          "th": "เกณฑ์ยืนยันสิทธิตามระเบียบ พ.ศ. 2566",
+          "en": "Eligibility confirmation under the 2023 regulation"
+        }
+      }
+    ],
+    "jobs": [
+      {
+        "from": "2004-01-01",
+        "source": "https://www.dop.go.th/download/laws/regulation_th_20152509164128_1.pdf",
+        "label": {
+          "th": "สิทธิส่งเสริมการประกอบอาชีพตาม ม.11",
+          "en": "Employment support under Section 11"
+        }
+      }
+    ]
   }
 }

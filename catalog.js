@@ -75,6 +75,7 @@ function checkSnapshot(catalog) {
     if(a.kind==='severity_formula'&&(!Array.isArray(a.rates)||a.rates.length!==2||a.rates.some(rate=>!Number.isFinite(rate)||rate<0||rate>1)))
       throw Error('Invalid disability rates');
     if (b.effectiveFrom && !validDate(b.effectiveFrom)) throw Error('Invalid benefit date: ' + b.id);
+    if (b.legalDates !== undefined) checkLegalDates(b.legalDates);
     if (b.effectiveThrough && !validDate(b.effectiveThrough)) throw Error('Invalid benefit end date: ' + b.id);
   }
   for (const id of ['pension','m40_retirement','screening','sick_income','unemployment','death_grant']) {
@@ -110,6 +111,16 @@ function checkSnapshot(catalog) {
   checkNumbers(catalog.benefits.map(b => b.amount));
 }
 
+function checkLegalDates(entries) {
+  if (!Array.isArray(entries) || !entries.length || entries.some(entry =>
+    !entry || !validDate(entry.from) || new URL(entry.source).protocol !== 'https:' ||
+    (entry.label && ['th', 'en'].some(lang => typeof entry.label[lang] !== 'string' || !entry.label[lang])) ||
+    (entry.sections && (!Array.isArray(entry.sections) || !entry.sections.length ||
+      entry.sections.some(section => !['33', '39', '40', 'none'].includes(section)))))) {
+    throw Error('Invalid legal date');
+  }
+}
+
 export function validateCatalog(catalog) {
   if (catalog.schemaVersion !== 2 || !catalog.version || !validDate(catalog.reviewedAt) ||
       !validDate(catalog.effectiveFrom) || catalog.effectiveThrough != null &&
@@ -117,6 +128,7 @@ export function validateCatalog(catalog) {
     throw Error('Invalid catalog version or dates');
   }
   checkSnapshot(catalog);
+  for (const entries of Object.values(catalog.advisorDates ?? {})) checkLegalDates(entries);
   const dates = new Set();
   const versions=new Set([catalog.version]);
   for (const update of catalog.updates ?? []) {

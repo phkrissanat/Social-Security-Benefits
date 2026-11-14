@@ -1,6 +1,6 @@
 import {estimateCompensation} from './compensation.js';
-import './preferences.js?v=45';
-import {setupAdvisor} from './advisor.js?v=45';
+import './preferences.js?v=47';
+import {setupAdvisor, renderLegalDates} from './advisor.js?v=47';
 import {initAccount} from './account.js';
 import {estimatePensionBase,estimateRetirementContributions,forecastRetirementContributions,renderRetirement,renderRetirementForecast} from './retirement.js';
 import {assessContinuous,amountDisplay,applicableBenefits} from './policy.js';
@@ -152,6 +152,7 @@ function moneyRow(benefit,parent,{future=false,possible=false}={}){
     const age = $('#profile-age').checkValidity() ? ageInput : null;
     if (section === '40') {
       const row = renderRetirement(parent, {section, option, months, age, benefit, calculation:catalog.calculation});
+      renderLegalDates(row, benefit.legalDates, section);
       if (age !== null && age < catalog.calculation.retirementAge) renderRetirementForecast(row, forecastRetirementContributions(null, {
         section, option, months, month, age, retirementAge:catalog.calculation.retirementAge, allocation: benefit.amount.allocations[option],
       }));
@@ -176,6 +177,7 @@ function moneyRow(benefit,parent,{future=false,possible=false}={}){
       }) : null;
     const maxBase = endMonth ? rules.wageCaps.findLast(cap => cap.from <= endMonth)?.max : undefined;
     const row = renderRetirement(parent, {section, option, months: months + futureMonths, value, savings, maxBase, benefit, calculation:catalog.calculation});
+    renderLegalDates(row, benefit.legalDates, section);
     if (futureMonths > 0) {
       const forecast = section === '33' && !hasWage ? null :
         forecastRetirementContributions(rules, {section, option, months, month, age, savings, wage, retirementAge:catalog.calculation.retirementAge});
@@ -189,6 +191,7 @@ function moneyRow(benefit,parent,{future=false,possible=false}={}){
   row.dataset.sources=benefit.sources.join(' ');
   if (benefit.id === 'screening') {
     renderHealthChecks(row);
+    renderLegalDates(row, benefit.legalDates, section);
     return;
   }
   const presentation = presentBenefit(benefit,catalog);
@@ -199,6 +202,7 @@ function moneyRow(benefit,parent,{future=false,possible=false}={}){
   const heading = node('div', '', row);
   heading.className = 'benefit-heading';
   node('h3', title, heading);
+  renderLegalDates(row, benefit.legalDates, section);
   const requiresCalculation = ['sick_income', 'unemployment', 'disability', 'death_grant', 'maternity_income', 'm40_disability'].includes(benefit.id);
   const disabilityRates = benefit.id === 'disability' && estimate?.rates;
   const sickLeave = benefit.id === 'sick_income';
@@ -242,7 +246,11 @@ function moneyRow(benefit,parent,{future=false,possible=false}={}){
     value.classList.toggle('money-value', right.includes('บาท'));
   }
 }
-function renderAssessment(){const root=$('#result');healthChecksOpen=root.querySelector('.health-checks')?.open??healthChecksOpen;root.replaceChildren();error('');const field=$('#continuous');syncProfile(count(), $('#option').value);field.setAttribute('aria-invalid','false');$('#option-wrap').hidden=section!=='40';$('#continuous-label').textContent=section==='40'?'ส่งสมทบทางเลือกนี้ต่อเนื่อง (เดือน)':'ส่งสมทบ ม.33/39 ต่อเนื่อง (เดือน)';if(!catalogCovers(catalog,month,currentDate())){node('h2','ต้องอัปเดตกฎก่อนประเมิน',root);node('p','ยังไม่มีชุดกฎที่ตรวจทานสำหรับเดือนปัจจุบัน',root);return}if(!field.checkValidity()){field.setAttribute('aria-invalid','true');error('กรอกจำนวนเต็ม 0–1,200 เดือน');return}const n=count();if(n===null)return;const profileCatalog=$('#profile-sex').value==='male'?{...catalog,benefits:catalog.benefits.filter(b=>b.id!=='maternity_income')}:catalog;const result=assessContinuous(profileCatalog,{section,option:$('#option').value,months:n,month,date:currentDate()});const retirement = n > 0 && (section === '40' || n >= catalog.benefits.find(b=>b.id==='pension').amount.thresholdMonths) ? result.future[0] : null;const pension = section !== '40' && retirement;node('h2','ผ่านเกณฑ์เงินสมทบ '+(result.matched.length + Number(Boolean(pension)))+' รายการ',root);if(pension)moneyRow(retirement,root,{future:true});for(const benefit of result.matched)moneyRow(benefit,root);if(!result.matched.length)node('p','ช่วงที่กรอกยังไม่ถึงเกณฑ์เงินสมทบของรายการปกติ',root).className='empty-filter';if(result.possible.length){node('h3','กรณีที่ต้องพิจารณาข้อยกเว้น',root).className='group-heading';result.possible.forEach(b=>moneyRow(b,root,{possible:true}))}if(retirement && section === '40')moneyRow(retirement,root,{future:true});if(result.short.length){const detail=node('details','',root);node('summary','ยังไม่ถึงเกณฑ์จากช่วงที่กรอก '+result.short.length+' รายการ',detail);for(const b of result.short)node('p',b.name+' — อย่างน้อย '+b.gate.min+' เดือน'+(b.gate.window?' ใน '+b.gate.window+' เดือน':''),detail)}}
+function renderAssessment(){const root=$('#result');healthChecksOpen=root.querySelector('.health-checks')?.open??healthChecksOpen;root.replaceChildren();error('');const field=$('#continuous');syncProfile(count(), $('#option').value);field.setAttribute('aria-invalid','false');$('#option-wrap').hidden=section!=='40';$('#continuous-label').textContent=section==='40'?'ส่งสมทบทางเลือกนี้ต่อเนื่อง (เดือน)':'ส่งสมทบ ม.33/39 ต่อเนื่อง (เดือน)';if(!catalogCovers(catalog,month,currentDate())){node('h2','ต้องอัปเดตกฎก่อนประเมิน',root);node('p','ยังไม่มีชุดกฎที่ตรวจทานสำหรับเดือนปัจจุบัน',root);return}if(!field.checkValidity()){field.setAttribute('aria-invalid','true');error('กรอกจำนวนเต็ม 0–1,200 เดือน');return}const n=count();if(n===null)return;const profileCatalog=$('#profile-sex').value==='male'?{...catalog,benefits:catalog.benefits.filter(b=>b.id!=='maternity_income')}:catalog;const result=assessContinuous(profileCatalog,{section,option:$('#option').value,months:n,month,date:currentDate()});const retirement = n > 0 && (section === '40' || n >= catalog.benefits.find(b=>b.id==='pension').amount.thresholdMonths) ? result.future[0] : null;const pension = section !== '40' && retirement;node('h2','ผ่านเกณฑ์เงินสมทบ '+(result.matched.length + Number(Boolean(pension)))+' รายการ',root);if(pension)moneyRow(retirement,root,{future:true});for(const benefit of result.matched)moneyRow(benefit,root);if(!result.matched.length)node('p','ช่วงที่กรอกยังไม่ถึงเกณฑ์เงินสมทบของรายการปกติ',root).className='empty-filter';if(result.possible.length){node('h3','กรณีที่ต้องพิจารณาข้อยกเว้น',root).className='group-heading';result.possible.forEach(b=>moneyRow(b,root,{possible:true}))}if(retirement && section === '40')moneyRow(retirement,root,{future:true});if(result.short.length){const detail=node('details','',root);node('summary','ยังไม่ถึงเกณฑ์จากช่วงที่กรอก '+result.short.length+' รายการ',detail);for (const b of result.short) {
+  const row = node('div', '', detail);
+  node('p', b.name + ' — อย่างน้อย ' + b.gate.min + ' เดือน' + (b.gate.window ? ' ใน ' + b.gate.window + ' เดือน' : ''), row);
+  renderLegalDates(row, b.legalDates, section);
+}}}
 const guestProfileKey = 'guest';
 let profileKey = guestProfileKey;
 let profileLoad = 0;
@@ -257,6 +265,7 @@ function updateAdvice() {
     option: $('#option').value,
     age: profileNumber('#profile-age'),
     today: currentDate(),
+    legalDates: catalog.advisorDates,
     unemployment: catalog.benefits.find(benefit => benefit.id === 'unemployment')?.amount,
   });
 }
